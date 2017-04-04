@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="js常用技巧"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>js常用技巧 - Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            js常用技巧
+            
+          </h1>
+          <p class="posted-on">
+          2017-04-04
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/前端开发/" rel="tag">
+                  前端开发
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h1 id="js常用的小技巧"><a href="#js常用的小技巧" class="headerlink" title="js常用的小技巧"></a>js常用的小技巧</h1><h3 id="1-使用闭包实现私有变量"><a href="#1-使用闭包实现私有变量" class="headerlink" title="1.使用闭包实现私有变量"></a>1.使用闭包实现私有变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> name; &#125;;</div><div class="line">  <span class="keyword">this</span>.setName = <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>) </span>&#123; name = newName; &#125;;</div><div class="line">  <span class="keyword">this</span>.getAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> age; &#125;;</div><div class="line">  <span class="keyword">this</span>.setAge = <span class="function"><span class="keyword">function</span>(<span class="params">newAge</span>) </span>&#123; age = newAge; &#125;;</div><div class="line"></div><div class="line">  <span class="comment">//未在构造函数中初始化的属性</span></div><div class="line">  <span class="keyword">var</span> occupation;</div><div class="line">  <span class="keyword">this</span>.getOccupation = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> occupation; &#125;;</div><div class="line">  <span class="keyword">this</span>.setOccupation = <span class="function"><span class="keyword">function</span>(<span class="params">newOcc</span>) </span>&#123; occupation =</div><div class="line">                       newOcc; &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-小心使用typeof、instanceof和constructor"><a href="#2-小心使用typeof、instanceof和constructor" class="headerlink" title="2.小心使用typeof、instanceof和constructor"></a>2.小心使用typeof、instanceof和constructor</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];</div><div class="line"><span class="keyword">typeof</span> arr;   <span class="comment">// return "object"</span></div><div class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span> <span class="comment">// true</span></div><div class="line">arr.constructor();  <span class="comment">//[]</span></div></pre></td></tr></table></figure>
+<h3 id="3-String的trim函数"><a href="#3-String的trim函数" class="headerlink" title="3.String的trim函数"></a>3.String的trim函数</h3><p>在Java、C#、PHP和很多其他语言中都有一个经典的 trim 函数，用来去除字符串中的空格符，而在JavaScript中并没有，所以我们需要在String对象上加上这个函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去掉字符串的前后空格，不包括字符串内部空格</span></div><div class="line"><span class="built_in">String</span>.prototype.trim = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/^\s+|\s+$/g</span>, <span class="string">""</span>);&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="4-使用-map-方法来遍历一个数组里的项"><a href="#4-使用-map-方法来遍历一个数组里的项" class="headerlink" title="4.使用 map() 方法来遍历一个数组里的项"></a>4.使用 map() 方法来遍历一个数组里的项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> squares = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].map(<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> val * val;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// squares will be equal to [1, 4, 9, 16]</span></div></pre></td></tr></table></figure>
+<h3 id="5-基于JSON的序列化和反序列化"><a href="#5-基于JSON的序列化和反序列化" class="headerlink" title="5.基于JSON的序列化和反序列化"></a>5.基于JSON的序列化和反序列化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;<span class="attr">name</span> :<span class="string">'Saad'</span>, <span class="attr">age</span> : <span class="number">26</span>, <span class="attr">department</span> : &#123;<span class="attr">ID</span> : <span class="number">15</span>, <span class="attr">name</span> : <span class="string">"R&amp;D"</span>&#125; &#125;;</div><div class="line"><span class="keyword">var</span> stringFromPerson = <span class="built_in">JSON</span>.stringify(person);</div><div class="line"><span class="comment">/* stringFromPerson is equal to "&#123;"name":"Saad","age":26,"department":&#123;"ID":15,"name":"R&amp;D"&#125;&#125;"   */</span></div><div class="line"><span class="keyword">var</span> personFromString = <span class="built_in">JSON</span>.parse(stringFromPerson);</div><div class="line"><span class="comment">/* personFromString is equal to person object  */</span></div></pre></td></tr></table></figure>
+<h3 id="6-避免使用-for-in-来遍历一个数组"><a href="#6-避免使用-for-in-来遍历一个数组" class="headerlink" title="6.避免使用 for-in 来遍历一个数组"></a>6.避免使用 for-in 来遍历一个数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> arrayNumbers) &#123;</div><div class="line">    sum += arrayNumbers[i];</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</span></div><div class="line">更好的方式：</div><div class="line">*/</div><div class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, len = arrayNumbers.length; i &lt; len; i++) &#123;</div><div class="line">    sum += arrayNumbers[i];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="7-使用-switch-case-语句，而不是一长串的-if-else"><a href="#7-使用-switch-case-语句，而不是一长串的-if-else" class="headerlink" title="7.使用 switch/case 语句，而不是一长串的 if/else"></a>7.使用 switch/case 语句，而不是一长串的 if/else</h3><p>在判断情况大于2种的时候，使用 switch/case 更高效，而且更优雅（更易于组织代码）。但在判断的情况超过10种的时候，不要使用 switch/case。</p>
+<h3 id="8-避免在循环内部使用-try-catch-finally"><a href="#8-避免在循环内部使用-try-catch-finally" class="headerlink" title="8.避免在循环内部使用 try-catch-finally"></a>8.避免在循环内部使用 try-catch-finally</h3><p>在运行时，每次当 catch 从句被执行的时候，被捕获的异常对象会赋值给一个变量，而在 try-catch-finally 结构中，每次都会新建这个变量。</p>
+<p>避免这样的写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> object = [<span class="string">'foo'</span>, <span class="string">'bar'</span>], i;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, len = object.length; i &lt;len; i++) &#123;</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        <span class="comment">// do something that throws an exception</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">catch</span> (e) &#123;</div><div class="line">        <span class="comment">// handle exception</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>而使用：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> object = [<span class="string">'foo'</span>, <span class="string">'bar'</span>], i;</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>, len = object.length; i &lt;len; i++) &#123;</div><div class="line">        <span class="comment">// do something that throws an exception</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span> (e) &#123;</div><div class="line">    <span class="comment">// handle exception</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="9-牢记，原始运算符始终比函数调用要高效。"><a href="#9-牢记，原始运算符始终比函数调用要高效。" class="headerlink" title="9.牢记，原始运算符始终比函数调用要高效。"></a>9.牢记，原始运算符始终比函数调用要高效。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//举例来说，不使用：</span></div><div class="line"><span class="keyword">var</span> min = <span class="built_in">Math</span>.min(a,b);</div><div class="line">A.push(v);</div><div class="line"></div><div class="line"><span class="comment">//而用：</span></div><div class="line"><span class="keyword">var</span> min = a &lt; b ? a b;</div><div class="line">A[A.length] = v;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/04/04/javascript常用的小知识/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2017/04/04/js设计模式/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>
