@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="Smartboy"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="website" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            Untitled
+            
+          </h1>
+          <p class="posted-on">
+          2015-03-15
+          </p>
+          <div class="tags-links">
+            
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h1 id="DOM和浏览器中的模式"><a href="#DOM和浏览器中的模式" class="headerlink" title="DOM和浏览器中的模式"></a>DOM和浏览器中的模式</h1><p>在本书的前面几章中，我们主要关注了JavaScript核心（ECMAScript），并没有涉及太多关于在浏览器中使用JavaScript的内容。在本章，我们将探索一些在浏览器环境中的模式，因为这是最常见的JavaScript程序环境。浏览器脚本编程也是大部分不喜欢JavaScript的人对这门语言的认知。这当然是可以理解，因为在浏览器中有非常多不一致的宿主对象和DOM实现。很明显，任何能够减轻客户端脚本编程的痛楚的最佳实践都是大有益处的。</p>
+<p>在本章中，你会看到一些零散的模式，包括DOM编程、事件处理、远程脚本、页面脚本的加载策略以及将JavaScript部署到生产环境的步骤。</p>
+<p>但首先，让我们来简要讨论一下如何做客户端脚本编程。</p>
+<h2 id="分离"><a href="#分离" class="headerlink" title="分离"></a>分离</h2><p>在web应用开发中主要关注的有三种东西：</p>
+<ul>
+<li><p>内容</p>
+<p>  即HTML文档</p>
+</li>
+<li><p>表现</p>
+<p>  指定文档样式的CSS</p>
+</li>
+<li><p>行为</p>
+<p>  JavaScript，用来处理用户交互和页面的动态变化</p>
+</li>
+</ul>
+<p>尽可能地将这三者分离可以加强应用在各种用户代理（译注：user agent，即为用户读取页面并呈现的软件，一般指浏览器）的可到达性（译注：delivery，指可被用户代理接受并理解的程度），比如图形浏览器、纯文本浏览器、用于残障人士的辅助技术、移动设备等等。分离常常是和渐进增强的思想一起实现的，我们从一个最基础的体验（纯HTML）开始，它将被用于最简单的用户代理，当用户代理的兼容性提升时再添加更多的可以为体验加分的东西。如果浏览器支持CSS，那么用户会看到文档更好的呈现。如果浏览器支持JavaScript，那文档会更像一个应用，有更多用来增强用户体验的特性。</p>
+<p>在实践中，分离意味者：</p>
+<ul>
+<li>在关掉CSS的情况下测试页面，看页面是否仍然可用，内容是否可以呈现和阅读</li>
+<li>在关掉JavaScript的情况下测试页面，确保页面仍然可以完成它的主要功能，所有的链接都可以正常工作（没有href=”#”的链接），表单仍然可以正常填写和提交</li>
+<li>不要使用内联的事件处理（如onclick）或者是内联的style属性，因为它们不属于内容层</li>
+<li>使用语义化的HTML元素，比如头部和列表等</li>
+</ul>
+<p>JavaScript（行为）层的地位不应该很显赫，也就是说它不应该成为页面正常工作必须依赖的东西，不应该使得用户在使用不支持的浏览器操作时存在障碍。它只应该被用来增强页面。</p>
+<p>通常比较优雅的用来处理浏览器差异的方法是特性检测，它的思想是你不应该使用浏览器类型检测来决定代码的逻辑，而是应该检测在当前环境中你需要使用的某个方法或者是属性是否存在。浏览器检测一般认为是一种“反模式”，虽然有的情况下不可避免要使用，但它应该是最后才考虑的选择，并且应该只在特性检测没有办法给出明确答案（或者造成明显性能问题）的时候使用：</p>
+<pre><code>// 反模式
+if (navigator.userAgent.indexOf(&apos;MSIE&apos;) !== −1) {
+    document.attachEvent(&apos;onclick&apos;, console.log);
+}
+
+// 更好的方式
+if (document.attachEvent) {
+    document.attachEvent(&apos;onclick&apos;, console.log);
+}
+
+// 或者还可以再具体一点
+if (typeof document.attachEvent !== &quot;undefined&quot;) {
+    document.attachEvent(&apos;onclick&apos;, console.log);
+}
+</code></pre><p>分离也有助于开发、维护，减少升级一个现有应用的难度，因为当出现问题的时候，你知道去看哪一块。当出现一个JavaScript错误的时候，你不需要去看HTML或者是CSS就能修复它。</p>
+<h2 id="DOM编程"><a href="#DOM编程" class="headerlink" title="DOM编程"></a>DOM编程</h2><p>操作页面的DOM树是在客户端JavaScript编程中最普遍的行为。这也是导致开发者头疼的最主要原因（这也导致了JavaScript名声不好），因为DOM方法在不同的浏览器中实现得有很多差异。这也是为什么使用一个抽象了浏览器差异的JavaScript库能显著提高开发速度的原因。</p>
+<p>我们来看一些在访问和修改DOM树时推荐的模式，主要考虑性能方面。</p>
+<h3 id="DOM访问"><a href="#DOM访问" class="headerlink" title="DOM访问"></a>DOM访问</h3><p>DOM操作性能不好，这是影响JavaScript性能的最主要原因。性能不好是因为浏览器的DOM实现通常是和JavaScript引擎分离的。从浏览器的角度来讲，这样做是很有意义的，因为有可能一个JavaScript应用根本不需要DOM，而除了JavaScript之外的其它语言（如IE的VBScript）也可以用来操作页面中的DOM。</p>
+<p>一个原则就是DOM访问的次数应该被减少到最低，这意味者：</p>
+<ul>
+<li>避免在循环中访问DOM</li>
+<li>将DOM引用赋给本地变量，然后操作本地变量</li>
+<li>当可能的时候使用selectors API</li>
+<li>遍历HTML collections时缓存<code>length</code>（见第二章）</li>
+</ul>
+<p>看下面例子中的第二个循环，尽管它看起来更长一些，但却要快上几十上百倍（取决于具体浏览器）：</p>
+<pre><code>// 反模式
+for (var i = 0; i &lt; 100; i += 1) {
+    document.getElementById(&quot;result&quot;).innerHTML += i + &quot;, &quot;;
+}
+
+// 更好的方式 - 更新本地变量
+var i, content = &quot;&quot;;
+for (i = 0; i &lt; 100; i += 1) {
+    content += i + &quot;,&quot;;
+}
+document.getElementById(&quot;result&quot;).innerHTML += content;
+</code></pre><p>在下一个代码片段中，第二个例子（使用了本地变量<code>style</code>）更好，尽管它需要多写一行代码，还需要多定义一个变量：</p>
+<pre><code>// 反模式
+var padding = document.getElementById(&quot;result&quot;).style.padding,
+    margin = document.getElementById(&quot;result&quot;).style.margin;
+
+// 更好的方式
+var style = document.getElementById(&quot;result&quot;).style,
+    padding = style.padding,
+    margin = style.margin;
+</code></pre><p>使用selectors API是指使用这个方法：</p>
+<pre><code>document.querySelector(&quot;ul .selected&quot;);
+document.querySelectorAll(&quot;#widget .class&quot;);
+</code></pre><p>这两个方法接受一个CSS选择器字符串，返回匹配这个选择器的DOM列表（译注：<code>querySelector</code>只返回第一个匹配的DOM）。selectors API在现代浏览器（以及IE8+）中可用，它总是会比你使用其它DOM方法来做同样的选择要快。主流的JavaScript库的最新版本都已经使用了这个API，所以你应该去检查你的项目，确保使用的是最新版本。</p>
+<p>给你经常访问的元素加上一个<code>id</code>属性也是有好处的，因为<code>document.getElementById(myid)</code>是找到一个DOM元素最容易也是最快的方法。</p>
+<h3 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h3><p>除了访问DOM元素之外，你可能经常需要改变它们、删除其中的一些或者是添加新的元素。更新DOM会导致浏览器重绘（repaint）屏幕，也经常导致重排（reflow，重新计算元素的位置），这些操作代价是很高的。</p>
+<p>还是那句话，原则是尽量少地更新DOM，这意味着我们可以将变化集中到一起，然后在“活动的”（live）文档树之外去执行这些变化。</p>
+<p>当你需要添加一棵相对较大的子树的时候，你应该在完成这棵树的构建之后再放到文档树中。为了达到这个目的，你可以使用文档碎片（document fragment）来包含你的节点。</p>
+<p>不要这样添加节点：</p>
+<pre><code>// 反模式
+// 在节点创建后就插入文档
+
+var p, t;
+
+p = document.createElement(&apos;p&apos;);
+t = document.createTextNode(&apos;first paragraph&apos;);
+p.appendChild(t);
+document.body.appendChild(p);
+
+p = document.createElement(&apos;p&apos;);
+t = document.createTextNode(&apos;second paragraph&apos;);
+p.appendChild(t);
+document.body.appendChild(p);
+</code></pre><p>一个更好的版本是创建一个文档碎片，然后“离线地”（译注：即不在文档树中）更新它，当它准备好之后再将它加入文档树中。当你将文档碎片添加到DOM树中时，碎片的内容将会被添加进去，而不是碎片本身。这个特性非常好用。所以当有好几个没有被包裹在同一个父元素的节点时，文档碎片是一个很好的包裹方式。</p>
+<p>下面是使用文档碎片的例子：</p>
+<pre><code>var p, t, frag;
+
+frag = document.createDocumentFragment();
+
+p = document.createElement(&apos;p&apos;);
+t = document.createTextNode(&apos;first paragraph&apos;);
+p.appendChild(t);
+frag.appendChild(p);
+
+p = document.createElement(&apos;p&apos;);
+t = document.createTextNode(&apos;second paragraph&apos;);
+p.appendChild(t);
+frag.appendChild(p);
+
+document.body.appendChild(frag);
+</code></pre><p>这个例子和前面例子中每段更新一次相比，文档树只被更新了一次，只导致一次重排/重绘。</p>
+<p>当你添加新的节点到文档中时，文档碎片很有用。当你需要更新已有的节点时，你也可以将这些变化集中。你可以将你要修改的子树的父节点克隆一份，然后对克隆的这份做修改，完成之后再去替换原来的元素。</p>
+<pre><code>var oldnode = document.getElementById(&apos;result&apos;),
+    clone = oldnode.cloneNode(true);
+
+// 修改克隆后的节点……
+
+// 结束修改之后：
+oldnode.parentNode.replaceChild(clone, oldnode);
+</code></pre><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>在浏览器脚本编程中，另一块充满兼容性问题并且带来很多不愉快的区域就是浏览器事件，比如<code>click</code>，<code>mouseover</code>等等。同样的，一个JavaScript库可以解决支持IE（9以下）和W3C标准实现带来的双倍工作量。</p>
+<p>我们来看一下一些主要的点，因为你在做一些简单的页面或者快速开发的时候可能不会使用已有的库，当然，也有可能你正在写你自己的库。</p>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p>麻烦是从给元素绑定事件开始的。假设你有一个按钮，点击它的时候增加计数器的值。你可以添加一个内联的<code>onclick</code>属性，这在所有的浏览器中都能正常工作，但是会违反分离和渐进增强的思想。所以你应该尽量在JavaScript中来做绑定，而不是在标签中。</p>
+<p>假设你有下面的标签：</p>
+<pre><code>&lt;button id=&quot;clickme&quot;&gt;Click me: 0&lt;/button&gt;
+</code></pre><p>你可以将一个函数赋给节点的onclick属性，但你只能这样做一次：</p>
+<pre><code>// 不好的解决方案
+var b = document.getElementById(&apos;clickme&apos;),
+    count = 0;
+
+b.onclick = function () {
+    count += 1;
+    b.innerHTML = &quot;Click me: &quot; + count;
+};
+</code></pre><p>如果你希望在按钮点击的时候执行好几个函数，那么在保持松耦合的情况下就不能用这种方法来做绑定。从技术上讲，你可以检测<code>onclick</code>是否已经包含一个函数，如果已经包含，就将它加到你自己的函数中，然后替换<code>onclick</code>的值为你的新函数。但是一个更干净的解决方案是使用<code>addEventListener()</code>方法。这个方法在IE8及以下版本中不存在，在这些浏览器中需要使用<code>attachEvent()</code>。</p>
+<p>当我们回头看条件初始化模式（第四章）时，会发现其中的一个示例实现就是一个很好的解决跨浏览器事件监听的套件。现在我们不讨论细节，只看一下如何给我们的按钮绑定事件：</p>
+<pre><code>var b = document.getElementById(&apos;clickme&apos;);
+if (document.addEventListener) { // W3C
+    b.addEventListener(&apos;click&apos;, myHandler, false);
+} else if (document.attachEvent) { // IE
+    b.attachEvent(&apos;onclick&apos;, myHandler);
+} else { // 为保险起见……
+    b.onclick = myHandler;
+}
+</code></pre><p>现在当按钮被点击时，<code>myHandler()</code>会被执行。我们来让这个函数实现增加按钮文字“Click me: 0”中的数字的功能。为了更有趣一点，我们假设有好几个按钮，一个<code>myHandler()</code>函数来处理所有的按钮点击。如果我们可以从每次点击的事件对象中获取节点和节点对应的计数器值，那为每个按钮保持一个引用和计数器就显得不高效了。</p>
+<p>我们先看一下解决方案，稍后再来做些评论：</p>
+<pre><code>function myHandler(e) {
+
+    var src, parts;
+
+    // 获取事件对象和事件来源
+    e = e || window.event;
+    src = e.target || e.srcElement;
+
+    // 真正工作的部分：更新文字
+    parts = src.innerHTML.split(&quot;: &quot;);
+    parts[1] = parseInt(parts[1], 10) + 1;
+    src.innerHTML = parts[0] + &quot;: &quot; + parts[1];
+
+    // 阻止冒泡
+    if (typeof e.stopPropagation === &quot;function&quot;) {
+        e.stopPropagation();
+    }
+    if (typeof e.cancelBubble !== &quot;undefined&quot;) {
+        e.cancelBubble = true;
+    }
+
+    // 阻止默认行为
+    if (typeof e.preventDefault === &quot;function&quot;) {
+        e.preventDefault();
+    }
+    if (typeof e.returnValue !== &quot;undefined&quot;) {
+        e.returnValue = false;
+    }
+
+}
+</code></pre><p>在线的例子可以在<a href="http://jspatterns.com/book/8/click.html" target="_blank" rel="external">http://jspatterns.com/book/8/click.html</a>找到。</p>
+<p>在这个事件处理函数中，有四个部分：</p>
+<ul>
+<li>首先，我们需要访问事件对象，它包含事件的一些信息以及触发这个事件的页面元素。事件对象会被传到事件处理回调函数中，但是使用<code>onclick</code>属性时需要使用全局属性<code>window.event</code>来获取</li>
+<li>第二部分是真正用于更新文字的部分</li>
+<li>接下来是阻止事件冒泡。在这个例子中它不是必须的，但通常情况下，如果你不阻止的话，事件会一直冒泡到文档根元素甚至<code>window</code>对象。同样的，我们也需要用两种方法来阻止冒泡：W3C标准方式（<code>stopPropagation()</code>）和IE的方式（使用<code>cancelBubble</code>）</li>
+<li>最后，如果需要的话，阻止默认行为。有一些事件（点击链接、提交表单）有默认的行为，但你可以使用<code>preventDefault()</code>（IE是通过设置<code>returnValue</code>的值为<code>false</code>的方式）来阻止这些默认行为</li>
+</ul>
+<p>如你所见，这里涉及到了很多重复性的工作，所以使用第七章讨论过的外观模式创建自己的事件处理套件是很有意义的。</p>
+<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>事件委托是通过事件冒泡来实现的，它可以减少分散到各个节点上的事件处理函数的数量。如果有10个按钮在一个<code>div</code>元素中，你可以给<code>div</code>绑定一个事件处理函数，而不是给每个按钮都绑定一个。</p>
+<p>我们来看一个实例，三个按钮放在一个<code>div</code>元素中（图8-1）。你可以在<a href="http://jspatterns.com/book/8/click-delegate.html" target="_blank" rel="external">http://jspatterns.com/book/8/click-delegate.html</a>看到这个事件委托的实例。</p>
+<blockquote>
+<p>译注: 上面的URL中的例子在IE下单击会没有反应,问题在于使用<code>document.attachEvernt()</code>时传递的第一个参数应该是<code>&#39;onclick&#39;</code>，而不是<code>&#39;click&#39;</code>。</p>
+</blockquote>
+<p><img src="./Figure/chapter8/8-1.jpg" alt="图8-1 事件委托示例：三个在点击时增加计数器值的按钮"></p>
+<p>图8-1 事件委托示例：三个在点击时增加计数器值的按钮</p>
+<p>结构是这样的：</p>
+<pre><code>&lt;div id=&quot;click-wrap&quot;&gt;
+    &lt;button&gt;Click me: 0&lt;/button&gt;
+    &lt;button&gt;Click me too: 0&lt;/button&gt;
+    &lt;button&gt;Click me three: 0&lt;/button&gt;
+&lt;/div&gt;
+</code></pre><p>你可以给包裹按钮的<code>div</code>绑定一个事件处理函数，而不是给每个按钮绑定一个。然后你可以使用和前面的示例中一样的<code>myHandler()</code>函数，但需要修改一个小地方：你需要将你不感兴趣的点击排除掉。在这个例子中，你只关注按钮上的点击，而在同一个<code>div</code>中产生的其它的点击应该被忽略掉。</p>
+<p><code>myHandler()</code>的改变就是检查事件来源的<code>nodeName</code>是不是<code>&quot;button&quot;</code>:</p>
+<pre><code>// ……
+// 获取事件对象和事件来源
+e = e || window.event;
+src = e.target || e.srcElement;
+
+if (src.nodeName.toLowerCase() !== &quot;button&quot;) {
+    return;
+}
+// ...
+</code></pre><p>事件委托的坏处是筛选容器中感兴趣的事件使得代码看起来更多了，但好处是性能的提升和更干净的代码，这个好处明显大于坏处，因此这是一种强烈推荐的模式。</p>
+<p>主流的JavaScript库通过提供方便的API的方式使得使用事件委托变得很容易。比如YUI3中有<code>Y.delegate()</code>方法，它允许你指定两个CSS选择器，一个用来匹配包裹容器，一个用来匹配你感兴趣的节点。这很方便，因为如果事件发生在你不关心的元素上时，你的事件处理回调函数不会被调用。在这种情况下，绑定一个事件处理函数很简单：</p>
+<pre><code>Y.delegate(&apos;click&apos;, myHandler, &quot;#click-wrap&quot;, &quot;button&quot;);
+</code></pre><p>感谢YUI抽象了浏览器的差异，已经处理好了事件的来源，使得回调函数更简单了：</p>
+<pre><code>function myHandler(e) {
+
+    var src = e.currentTarget,
+        parts;
+
+    parts = src.get(&apos;innerHTML&apos;).split(&quot;: &quot;);
+    parts[1] = parseInt(parts[1], 10) + 1;
+    src.set(&apos;innerHTML&apos;, parts[0] + &quot;: &quot; + parts[1]);
+
+    e.halt();
+}
+</code></pre><p>你可以在<a href="http://jspatterns.com/book/8/click-y-delegate.html" target="_blank" rel="external">http://jspatterns.com/book/8/click-y-delegate.html</a>看到实例。</p>
+<h2 id="长时间运行的脚本"><a href="#长时间运行的脚本" class="headerlink" title="长时间运行的脚本"></a>长时间运行的脚本</h2><p>你可能注意到过，有时候浏览器会提示脚本运行时间过长，询问用户是否要停止执行。不管应用有多复杂，你都不希望这种情况发生在自己的应用中。</p>
+<p>同时，如果脚本运行时间太长的话，浏览器的UI将变得没有响应，用户不能点击任何东西。这是一种很差的用户体验，应该尽量避免。</p>
+<p>在JavaScript中没有线程，但你可以在浏览器中使用<code>setTimeout()</code>来模拟，或者在现代浏览器中使用web workers。</p>
+<h3 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h3><p>它的思想是将一大堆工作分解成为一小段一小段，然后每隔1毫秒运行一段。使用1毫秒的延迟会导致整个任务完成得更慢，但是用户界面会保持可响应状态，用户会觉得浏览器没有失控，觉得更舒服。</p>
+<blockquote>
+<p>1毫秒（甚至0毫秒）的延迟执行命令在实际运行的时候会延迟更多，这取决于浏览器和操作系统。设定0毫秒的延迟并不意味着马上执行，而是指“尽快执行”。比如，在IE中，最短的延迟是15毫秒。</p>
+</blockquote>
+<h3 id="Web-Workers"><a href="#Web-Workers" class="headerlink" title="Web Workers"></a>Web Workers</h3><p>现代浏览器为长时间运行的脚本提供了另一种解决方案：web workers。web workers在浏览器内部提供了后台线程支持，你可以将计算量很大的部分放到一个单独的文件中，比如<code>my_web_worker.js</code>，然后从主程序（页面）中这样调用它：</p>
+<pre><code>var ww = new Worker(&apos;my_web_worker.js&apos;);
+ww.onmessage = function (event) {
+    document.body.innerHTML +=
+        &quot;&lt;p&gt;message from the background thread: &quot; + event.data + &quot;&lt;/p&gt;&quot;;
+};
+</code></pre><p>下面展示了一个做1亿次简单的数学运算的web worker：</p>
+<pre><code>var end = 1e8, tmp = 1;
+
+postMessage(&apos;hello there&apos;);
+
+while (end) {
+    end -= 1;
+    tmp += end;
+    if (end === 5e7) { // 5e7是1e8的一半
+        postMessage(&apos;halfway there, `tmp` is now &apos; + tmp);
+    }
+}
+
+postMessage(&apos;all done&apos;);
+</code></pre><p>web worker使用<code>postMessage()</code>来和调用它的程序通讯，调用者通过<code>onmessage</code>事件来接受更新。<code>onmessage</code>事件处理函数接受一个事件对象作为参数，这个对象含有一个由web worker传过来<code>data</code>属性。类似的，调用者（在这个例子中）也可以使用<code>ww.postMessage()</code>来给web worker传递数据，web worker可以通过一个<code>onmessage</code>事件处理函数来接受这些数据。</p>
+<p>上面的例子会在浏览器中打印出：</p>
+<pre><code>message from the background thread: hello there
+message from the background thread: halfway there, `tmp` is now 3749999975000001 message from the background thread: all done
+</code></pre><h2 id="远程脚本编程"><a href="#远程脚本编程" class="headerlink" title="远程脚本编程"></a>远程脚本编程</h2><p>现代web应用经常会使用远程脚本编程和服务器通讯，而不刷新当前页面。这使得web应用更灵活，更像桌面程序。我们来看一下几种用JavaScript和服务器通讯的方法。</p>
+<h3 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h3><p>现在，<code>XMLHttpRequest</code>是一个特别的对象（构造函数），绝大多数浏览器都可以用，它使得我们可以从JavaScript来发送HTTP请求。发送一个请求有以下三步：</p>
+<ol>
+<li>初始化一个<code>XMLHttpRequest</code>对象（简称XHR）</li>
+<li>提供一个回调函数，供请求对象状态改变时调用</li>
+<li>发送请求</li>
+</ol>
+<p>第一步很简单：</p>
+<pre><code>var xhr = new XMLHttpRequest();
+</code></pre><p>但是在IE7之前的版本中，XHR的功能是使用ActiveX对象实现的，所以需要做一下兼容处理。</p>
+<p>第二步是给<code>readystatechange</code>事件提供一个回调函数：</p>
+<pre><code>xhr.onreadystatechange = handleResponse;
+</code></pre><p>最后一步是使用<code>open()</code>和<code>send()</code>两个方法触发请求。<code>open()</code>方法用于初始化HTTP请求的方法（如GET，POST）和URL。<code>send()</code>方法用于传递POST的数据，如果是GET方法，则是一个空字符串。<code>open()</code>方法的最后一个参数用于指定这个请求是不是异步的。异步是指浏览器在等待响应的时候不会阻塞，这明显是更好的用户体验，因此除非必须要同步，否则异步参数应该使用true：</p>
+<pre><code>xhr.open(&quot;GET&quot;, &quot;page.html&quot;, true);
+xhr.send();
+</code></pre><p>下面是一个完整的示例，它获取新页面的内容，然后将当前页面的内容替换掉（可以在<a href="http://jspatterns.com/book/8/xhr.html" target="_blank" rel="external">http://jspatterns.com/book/8/xhr.html</a>看到示例）：</p>
+<pre><code>var i, xhr, activeXids = [
+    &apos;MSXML2.XMLHTTP.3.0&apos;,
+    &apos;MSXML2.XMLHTTP&apos;,
+    &apos;Microsoft.XMLHTTP&apos;
+];
+
+if (typeof XMLHttpRequest === &quot;function&quot;) { // native XHR
+    xhr = new XMLHttpRequest();
+} else { // IE7以下
+    for (i = 0; i &lt; activeXids.length; i += 1) {
+        try {
+            xhr = new ActiveXObject(activeXids[i]);
+            break;
+        } catch (e) {}
+    }
+}
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4) {
+        return false;
+    }
+    if (xhr.status !== 200) {
+        alert(&quot;Error, status code: &quot; + xhr.status);
+        return false;
+    }
+    document.body.innerHTML += &quot;&lt;pre&gt;&quot; + xhr.responseText + &quot;&lt;\/pre&gt;&quot;; };
+
+xhr.open(&quot;GET&quot;, &quot;page.html&quot;, true);
+xhr.send(&quot;&quot;);
+</code></pre><p>代码中的一些说明：</p>
+<ul>
+<li>因为IE6及以下版本中，创建XHR对象有一点复杂，所以我们通过一个数组列出ActiveX的名字，然后遍历这个数组，使用<code>try-catch</code>块来尝试创建对象。</li>
+<li>回调函数会检查<code>xhr</code>对象的<code>readyState</code>属性。这个属性有0到4一共5个值，4代表“complete”（完成）。如果状态还没有完成，我们就继续等待下一次<code>readystatechange</code>事件。</li>
+<li>回调函数也会检查xhr对象的<code>status</code>属性。这个属性和HTTP状态码对应，比如200（OK）或者是404（Not found）。我们只对状态码200感兴趣，而将其它所有的都报为错误（为了简化示例，否则需要检查其它不代表出错的状态码）。</li>
+<li>上面的代码会在每次创建XHR对象时检查一遍支持情况。你可以使用前面提到过的模式（如条件初始化）来重写上面的代码，使得只需要做一次检查。</li>
+</ul>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><p>JSONP（JSON with padding）是另一种发起远程请求的方式。与XHR不同，它不受浏览器同源策略的限制，所以考虑到加载第三方站点内容的安全问题，使用它时应该很谨慎。</p>
+<p>一个XHR请求的返回可以是任何类型的文档：</p>
+<ul>
+<li>XML文档（过去很常用）</li>
+<li>HTML片段（很常用）</li>
+<li>JSON数据（轻量、方便）</li>
+<li>简单的文本文件及其它</li>
+</ul>
+<p>而使用JSONP的话，返回的数据格式经常是被一个函数包裹的JSON，具体的函数名称在请求的时候提供。</p>
+<p>JSONP的请求URL通常是像这样：</p>
+<pre><code>http://example.org/getdata.php?callback=myHandler
+</code></pre><p><code>getdata.php</code>可以是任何类型的页面或者脚本。<code>callback</code>参数指定用来处理响应的JavaScript函数（译注：也就是前面提到的包裹JSON的函数）。</p>
+<p>这个URL会被放到一个动态生成的<code>&lt;script&gt;</code>元素中，像这样：</p>
+<pre><code>var script = document.createElement(&quot;script&quot;);
+script.src = url;
+document.body.appendChild(script);
+</code></pre><p>服务器返回的JSON数据作为参数被传递给回调函数（函数名在请求时指定，也出现在返回的结果中）。最终的结果实际上是页面中多了一个新的脚本，这个脚本的内容就是一个函数调用，如：</p>
+<pre><code>myHandler({&quot;hello&quot;: &quot;world&quot;});
+</code></pre><h4 id="JSONP示例：井字棋"><a href="#JSONP示例：井字棋" class="headerlink" title="JSONP示例：井字棋"></a>JSONP示例：井字棋</h4><p>我们来看一个使用JSONP的井字棋游戏示例，玩家就是客户端（浏览器）和服务器。它们两者都会产生1到9之间的随机数，我们使用JSONP去取服务器产生的数字（图8-2）。</p>
+<p>你可以在<a href="http://jspatterns.com/book/8/ttt.html" target="_blank" rel="external">http://jspatterns.com/book/8/ttt.html</a>玩这个游戏。</p>
+<p><img src="./Figure/chapter8/8-2.jpg" alt="图8-2 使用JSONP的井字棋游戏"></p>
+<p>图8-2 使用JSONP的井字棋游戏</p>
+<p>界面上有两个按钮：一个用于开始新游戏，一个用于取服务器下的棋（客户端下的棋会在一定数量的延时之后自动进行）：</p>
+<pre><code>&lt;button id=&quot;new&quot;&gt;New game&lt;/button&gt;
+&lt;button id=&quot;server&quot;&gt;Server play&lt;/button&gt;
+</code></pre><p>界面上包含9个单元格，每个都有对应的id，比如：</p>
+<pre><code>&lt;td id=&quot;cell-1&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td id=&quot;cell-2&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td id=&quot;cell-3&quot;&gt;&amp;nbsp;&lt;/td&gt;
+……
+</code></pre><p>整个游戏是在一个全局对象<code>ttt</code>中实现：</p>
+<pre><code>var ttt = { 
+    // 已经下过的棋盘
+    played: [],
+
+    // 快捷函数
+    get: function (id) {
+        return document.getElementById(id);
+    },
+
+    // 处理点击
+    setup: function () {
+        this.get(&apos;new&apos;).onclick = this.newGame;
+        this.get(&apos;server&apos;).onclick = this.remoteRequest;
+    },
+
+    // 清除棋盘
+    newGame: function () {
+        var tds = document.getElementsByTagName(&quot;td&quot;),
+            max = tds.length, 
+            i;
+        for (i = 0; i &lt; max; i += 1) {
+            tds[i].innerHTML = &quot;&amp;nbsp;&quot;;
+        }
+        ttt.played = [];
+    },
+
+    // 发送请求
+    remoteRequest: function () {
+        var script = document.createElement(&quot;script&quot;);
+        script.src = &quot;server.php?callback=ttt.serverPlay&amp;played=&quot; + ttt.played.join(&apos;,&apos;);
+        document.body.appendChild(script);
+    },
+
+    // 回调，服务器下棋
+    serverPlay: function (data) {
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+
+        data = parseInt(data, 10);
+        this.played.push(data);
+
+        this.get(&apos;cell-&apos; + data).innerHTML = &apos;&lt;span class=&quot;server&quot;&gt;X&lt;\/span&gt;&apos;;
+
+        setTimeout(function () {
+            ttt.clientPlay();
+        }, 300); // 假装想破脑袋
+    },
+
+    // 客户端下棋
+    clientPlay: function () {
+        var data = 5;
+
+        if (this.played.length === 9) {
+            alert(&quot;Game over&quot;);
+            return;
+        }
+
+        // 随机产生数字1 - 9，直到找到空格格
+        while (this.get(&apos;cell-&apos; + data).innerHTML !== &quot;&amp;nbsp;&quot;) {
+            data = Math.ceil(Math.random() * 9);
+        }
+        this.get(&apos;cell-&apos; + data).innerHTML = &apos;O&apos;;
+        this.played.push(data);
+    } 
+};
+</code></pre><p><code>ttt</code>对象维护着一个已经填过的单元格的列表<code>ttt.played</code>，并且将它发送给服务器，这样服务器就可以返回一个没有玩过的数字。如果有错误发生，服务器会像这样响应：</p>
+<pre><code>ttt.serverPlay({&quot;error&quot;: &quot;Error description here&quot;});
+</code></pre><p>如你所见，JSONP中的回调函数必须是公开的并且全局可访问的函数，它并不一定要是全局函数，也可以是一个全局对象的方法。如果没有错误发生，服务器将会返回一个函数调用，像这样：</p>
+<pre><code>ttt.serverPlay(3);
+</code></pre><p>这里的<code>3</code>是指3号单元格是服务器要下棋的位置。在这种情况下，数据非常简单，甚至都不需要使用JSON格式，只需要一个简单的值就可以了。</p>
+<h3 id="框架（frame）和图片信标-image-beacon"><a href="#框架（frame）和图片信标-image-beacon" class="headerlink" title="框架（frame）和图片信标(image beacon)"></a>框架（frame）和图片信标(image beacon)</h3><p>另外一种做远程脚本编程的方式是使用框架。你可以使用JavaScript来创建框架并改变它的<code>src</code>属性（URL），新URL的页面中可以包含数据和函数调用来更新调用者，也就是框架之外的父页面。</p>
+<p>远程脚本编程中最最简单的情况是你只需要传递一点数据给服务器，而并不需要服务器的响应内容。在这种情况下，你可以创建一个新的图片，然后将它的<code>src</code>指向服务器的脚本：</p>
+<pre><code>new Image().src = &quot;http://example.org/some/page.php&quot;;
+</code></pre><p>这种模式叫作图片信标，当你想发送一些数据给服务器记录时很有用，比如做访问统计。因为信标的响应对你来说完全是没有用的，所以通常的做法（不推荐）是让服务器返回一个1x1的GIF图片。更好的做法是让服务器返回一个<code>&quot;204 No Content&quot;</code>HTTP响应。这意味着返回给客户端的响应只有响应头（header）而没有响应体（body）。</p>
+<h2 id="部署JavaScript"><a href="#部署JavaScript" class="headerlink" title="部署JavaScript"></a>部署JavaScript</h2><p>在生产环境中使用JavaScript时，有不少性能方面的考虑，我们来讨论一下最重要的一些。如果需要了解所有的细节，可以参见O’Reilly出社的《高性能网站建设指南》和《高性能网站建设进阶指南》。</p>
+<h3 id="合并脚本"><a href="#合并脚本" class="headerlink" title="合并脚本"></a>合并脚本</h3><p>创建高性能网站的第一个原则就是尽量减少外部引用的组件（译注：这里指文件），因为HTTP请求的代价是比较大的。具体就JavaScript而言，可以通过合并外部脚本来显著提高页面加载速度。</p>
+<p>我们假设你的页面正在使用jQuery库，这是一个<code>.js</code>文件。然后你使用了一些jQuery插件，这些插件也是单独的文件。这样的话在你还一行代码都没有写的时候就已经有了四五个文件了。把这些文件合并起来是很有意义的，尤其是其中的一些体积很小（2-3kb）时，这种情况下，HTTP协议的开销会比下载本身还大。合并脚本的意思就是创建一个新的js文件，然后把每个文件的内容粘贴进去。</p>
+<p>当然，合并的操作应该放在代码部署到生产环境之前，而不是在开发环境中，否则会使调试变得困难。</p>
+<p>合并脚本的不便之处是：</p>
+<ul>
+<li><p>在部署前多了一步操作，但这很容易使用命令行自动化工具来做，比如使用Linux/Unix的<code>cat</code>：</p>
+<p>  $ cat jquery.js jquery.quickselect.js jquery.limit.js &gt; all.js</p>
+</li>
+<li>失去一些缓存上的便利——当你对某个文件做了一点小修改之后，会使得整个合并后的代码缓存失效。所以比较好的方法是为大的项目设定一个发布计划，或者是将代码合并为两个文件：一个包含可能会经常变更的代码，另一个包含那些不会轻易变更的“核心”。</li>
+<li>你需要处理合并后文件的命名或者是版本问题，比如使用一个时间戳<code>all_20100426.js</code>或者是使用文件内容的hash值。</li>
+</ul>
+<p>这就是主要的不便之处，但它带来的好处却是远远大于这些麻烦的。</p>
+<h3 id="压缩代码"><a href="#压缩代码" class="headerlink" title="压缩代码"></a>压缩代码</h3><p>第二章中，我们讨论过代码压缩。部署之前进行代码压缩也是一个很重要的步骤。</p>
+<p>从用户的角度来想，完全没有必要下载代码中的注释，因为这些注释根本不影响代码运行。</p>
+<p>压缩代码能带来多少好处取决于代码中注释和空白的数量，也取决于你使用的压缩工具。平均来说，压缩可以减少50%左右的体积。</p>
+<p>服务端脚本压缩也是应该要做的事情。配置启用gzip压缩是一个一次性的工作，能带来立杆见影的速度提升。即使你正在使用共享的空间，供应商并没有提供那么多服务器配置的空间，大部分的供应商也会允许使用<code>.htaccess</code>配置文件。所以可以将这些加入到站点根目录的<code>.htaccess</code>文件中：</p>
+<pre><code>AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json
+</code></pre><p>平均下来压缩会节省70%的文件体积。将代码压缩和服务端压缩合计起来，你的用户只需要下载你写出来的未压缩文件体积的15%左右。</p>
+<h3 id="缓存头"><a href="#缓存头" class="headerlink" title="缓存头"></a>缓存头</h3><p>与比较流行的观点相反，其实文件在浏览器缓存中的时间并没有那么久。你可以通过使用<code>Expires</code>头来增加非首次访问时命中缓存的概率：</p>
+<p>这也是一个在<code>.htaccess</code>中做的一次性配置工作：</p>
+<pre><code>ExpiresActive On
+ExpiresByType application/x-javascript &quot;access plus 10 years&quot;
+</code></pre><p>它的弊端是当你想更改这个文件时，你需要给它重命名，如果你已经处理好了合并的文件命名规则，那你就已经处理好这里的命名问题了。</p>
+<h3 id="使用CDN"><a href="#使用CDN" class="headerlink" title="使用CDN"></a>使用CDN</h3><p>CDN是指“文件分发网络”（Content Delivery Network）。这是一项收费（有时候还相当昂贵）的托管服务，它将你的文件分发到世界上各个不同的数据中心，但代码中的URL却都是一样的，这样可以使用户更快地访问。</p>
+<p>即使你没有CDN的预算，你仍然有一些可以免费使用的东西：</p>
+<ul>
+<li>Google托管了很多流行的开源库，你可以免费使用，并从它的CDN中得到速度提升（译注：鉴于Google在国内的尴尬处境，不建议使用）</li>
+<li>微软托管了jQuery和自家的Ajax库</li>
+<li>雅虎在自己的CDN上托管了YUI库</li>
+</ul>
+<h2 id="加载策略"><a href="#加载策略" class="headerlink" title="加载策略"></a>加载策略</h2><p>怎样在页面上引入脚本，这是一个看起来很简单的问题——使用<code>&lt;script&gt;</code>元素，然后要么写内联的JavaScript代码要么在<code>src</code>属性中指定一个独立的文件：</p>
+<pre><code>// 第一种选择
+&lt;script&gt;
+console.log(&quot;hello world&quot;);
+&lt;/script&gt;
+// 第二种选择
+&lt;script src=&quot;external.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>但是，当你的目标是要构建一个高性能的web应用的时候，有些模式和考虑点还是应该知道的。</p>
+<p>作为题外话，来看一些比较常见的开发者会用在<code>&lt;script&gt;</code>元素上的属性：</p>
+<ul>
+<li><p><code>language=&quot;JavaScript&quot;</code></p>
+<p>  还有一些不同大小写形式的<code>&quot;JavaScript&quot;</code>，有的时候还会带上一个版本号。<code>language</code>属性不应该被使用，因为默认的语言就是JavaScript。版本号也不像想象中工作得那么好，这应该是一个设计上的错误。</p>
+</li>
+<li><p><code>type=&quot;text/javascript&quot;</code></p>
+<p>  这个属性是HTML4和XHTML1标准所要求的，但它不应该存在，因为浏览器会假设它就是JavaScript。HTML5不再要求这个属性。除非是要强制通过验证，否则没有任何使用<code>type</code>的理由。</p>
+</li>
+<li><p><code>defer</code></p>
+<p>  （或者是HTML5中更好的<code>async</code>）是一种指定浏览器在下载外部脚本时不阻塞页面其它部分的方法，但还没有被广泛支持。关于阻塞的更多内容会在后面提及。</p>
+</li>
+</ul>
+<h3 id="script元素的位置"><a href="#script元素的位置" class="headerlink" title="script元素的位置"></a>script元素的位置</h3><p><code>script</code>元素会阻塞页面的下载。浏览器会同时下载好几个组件（文件），但遇到一个外部脚本的时候，会停止其它的下载，直到脚本文件被下载、解析、执行完毕。这会严重影响页面的加载时间，尤其是当页面加载时发生多次阻塞的时候。</p>
+<p>为了尽量减小阻塞带来的影响，你可以将script元素放到页面的尾部，在<code>&lt;/body&gt;</code>之前，这样就没有可以被脚本阻塞的元素了。此时，页面中的其它组件（文件）已经被下载完毕并呈现给用户了。</p>
+<p>最坏的“反模式”是在文档的头部使用独立的文件：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+    &lt;!-- 反模式 --&gt;
+    &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;jquery.quickselect.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;jquery.lightbox.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;myapp.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ……
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>一个更好的选择是将所有的文件合并起来：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ……
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>最好的选择是将合并后的脚本放到页面的尾部：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ……
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="HTTP分块"><a href="#HTTP分块" class="headerlink" title="HTTP分块"></a>HTTP分块</h3><p>HTTP协议支持“分块编码”，它允许将页面分成一块一块发送。所以如果你有一个很复杂的页面，你不需要将那些（静态）头部信息也等到所有的服务端工作都完成后再开始发送。</p>
+<p>一个简单的策略是在组装页面其余部分的时候将页面<code>&lt;head&gt;</code>的内容作为第一块发送。也就是像这样子：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+&lt;/head&gt;
+&lt;!-- 第一块结束 --&gt;
+&lt;body&gt;
+    ……
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt; &lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 第二块结束 --&gt;
+</code></pre><p>这种情况下可以做一个简单的改动，将JavaScript移回<code>&lt;head&gt;</code>，随着第一块一起发送。</p>
+<p>这样的话可以让浏览器在拿到<code>head</code>区内容后就开始下载脚本文件，而此时页面的其它部分在服务端还尚未就绪：</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt;
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt; &lt;/body&gt;
+&lt;/head&gt;
+&lt;!-- 第一块结束 --&gt;
+&lt;body&gt;
+    ……
+&lt;/html&gt;
+&lt;!-- 第二块结束 --&gt;
+</code></pre><p>一个更好的办法是使用第三块内容，让它在页面尾部，只包含脚本。如果有一些每个页面都用到的静态的头部，也可以将这部分随第一块一起发送：</p>
+<pre><code>&lt;!doctype html&gt; &lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My App&lt;/title&gt; &lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;header&quot;&gt;
+        &lt;img src=&quot;logo.png&quot; /&gt;
+        ...
+    &lt;/div&gt;
+    &lt;!-- 第一块结束 --&gt;
+
+    ... The full body of the page ...
+
+    &lt;!-- 第二块结束 --&gt;
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 第三块结束 --&gt;
+</code></pre><p>这种方法很适合使用渐进增强思想的网站（关键业务不依赖JavaScript）。当HTML的第二块发送完毕的时候，浏览器已经有了一个加载、显示完毕并且可用的页面，就像禁用JavaScript时的情况。当JavaScript随着第三块到达时，它会进一步增强页面，为页面锦上添花。</p>
+<h3 id="动态script元素实现非阻塞下载"><a href="#动态script元素实现非阻塞下载" class="headerlink" title="动态script元素实现非阻塞下载"></a>动态script元素实现非阻塞下载</h3><p>前面已经说到过，JavaScript会阻塞后面文件的下载，但有一些模式可以防止阻塞：</p>
+<ul>
+<li>使用XHR加载脚本，然后作为一个字符串使用<code>eval()</code>来执行。这种方法受同源策略的限制，而且引入了<code>eval()</code>这种“反模式”`</li>
+<li>使用<code>defer</code>和<code>async</code>属性，但有浏览器兼容性问题</li>
+<li>使用动态<code>&lt;script&gt;</code>元素</li>
+</ul>
+<p>最后一种是一个很好并且实际可行的模式。和介绍JSONP时所做的一样，创建一个新的<code>script</code>元素，设置它的<code>src</code>属性，然后将它放到页面上。</p>
+<p>这是一个异步加载JavaScript、不阻塞其它文件下载的示例：</p>
+<pre><code>var script = document.createElement(&quot;script&quot;);
+script.src = &quot;all_20100426.js&quot;;
+document.documentElement.firstChild.appendChild(script);
+</code></pre><p>这种模式的缺点是，在这之后加载的脚本不能依赖当前加载的这个脚本，因为这个脚本是异步加载的，所以无法保证它什么时候会被加载进来，如果要依赖的话，很可能会访问到（因还未加载完毕导致的）未定义的对象。</p>
+<p>如果要解决这个问题，可以让内联的脚本不立即执行，而是作为一个函数放到一个数组中。当依赖的脚本加载完毕后，再执行数组中的所有函数。所以一共有三个步骤。</p>
+<p>首先，创建一个数组用来存储所有的内联代码，定义的位置尽量靠前：</p>
+<pre><code>var mynamespace = {
+    inline_scripts: []
+};
+</code></pre><p>然后你需要将这些单独的内联脚本包裹进一个函数中，然后将每个函数放到<code>inline_scripts</code>数组中，也就是这样：</p>
+<pre><code>// 原来的：
+// &lt;script&gt;console.log(&quot;I am inline&quot;);&lt;/script&gt;
+
+// 修改后的：
+&lt;script&gt;
+    mynamespace.inline_scripts.push(function () {
+        console.log(&quot;I am inline&quot;);
+    });
+&lt;/script&gt;
+</code></pre><p>最后一步是使用异步加载的脚本遍历这个数组，然后执行函数：</p>
+<pre><code>var i, scripts = mynamespace.inline_scripts, max = scripts.length;
+for (i = 0; i &lt; max; max += 1) {
+    scripts[i]();
+}
+</code></pre><h4 id="插入-lt-script-gt-元素"><a href="#插入-lt-script-gt-元素" class="headerlink" title="插入&lt;script&gt;元素"></a>插入<code>&lt;script&gt;</code>元素</h4><p>通常脚本是插入到文档的<code>&lt;head&gt;</code>中的，但其实你可以插入任何元素中，包括<code>&lt;body&gt;</code>（像JSONP示例中那样）。</p>
+<p>在前面的例子中，我们使用<code>documentElement</code>来插到<code>&lt;head&gt;</code>中，因为<code>documentElement</code>就是<code>&lt;html&gt;</code>，它的第一个子元素是<code>&lt;head&gt;</code>：</p>
+<pre><code>document.documentElement.firstChild.appendChild(script);
+</code></pre><p>通常也会这样写：</p>
+<pre><code>document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+</code></pre><p>当你能控制结构的时候，这样做没有问题，但是如果你在写挂件（widget）或者是广告时，你并不知道使用它的是一个什么样的页面。甚至可能页面上连<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>都没有，尽管<code>document.body</code>在绝大多数没有<code>&lt;body&gt;</code>标签的时候也可以工作：</p>
+<pre><code>document.body.appendChild(script);
+</code></pre><p>可以肯定页面上一定存在的一个标签是你正在运行的脚本所处的位置——<code>script</code>标签。（对内联或者外部文件来说）如果没有<code>script</code>标签，那么代码就不会运行。可以利用这一事实，在页面的第一个<code>script</code>标签上使用<code>insertBefore()</code>：</p>
+<pre><code>var first_script = document.getElementsByTagName(&apos;script&apos;)[0];
+first_script.parentNode.insertBefore(script, first_script);
+</code></pre><p><code>frist_script</code>是页面中一定存在的一个<code>script</code>标签，<code>script</code>是你创建的新的<code>script</code>元素。</p>
+<h3 id="延迟加载"><a href="#延迟加载" class="headerlink" title="延迟加载"></a>延迟加载</h3><p>所谓的延迟加载是指在页面的<code>load</code>事件之后再加载外部文件。通常，将一个大的合并后的文件分成两部分是有好处的：</p>
+<ul>
+<li>一部分是页面初始化和绑定UI元素的事件处理函数必须的</li>
+<li>第二部分是只在用户交互或者其它条件下才会用到的</li>
+</ul>
+<p>分成两部分的目标就是逐步加载页面，让用户尽快可以进行一些操作。剩余的部分在用户可以看到页面的时候再在后台加载。</p>
+<p>加载第二部分JavaScript的方法也是使用动态<code>script</code>元素，将它加在<code>head</code>或者<code>body</code>中：</p>
+<pre><code>    ……页面主体部分……
+
+    &lt;!-- 第二块结束 --&gt;
+    &lt;script src=&quot;all_20100426.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+    window.onload = function () {
+        var script = document.createElement(&quot;script&quot;);
+        script.src = &quot;all_lazy_20100426.js&quot;;
+        document.documentElement.firstChild.appendChild(script);
+    };
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 第三块结束 --&gt;
+</code></pre><p>对很多应用来说，延迟加载的部分大部分情况下会比核心部分要大，因为我们关注的“行为”（比如拖放、XHR、动画）只在用户初始化之后才会发生。</p>
+<h3 id="按需加载"><a href="#按需加载" class="headerlink" title="按需加载"></a>按需加载</h3><p>前面的模式会在页面加载后无条件加载其它的JavaScript，并假设这些代码很可能会被用到。但我们是否可以做得更好，分部分加载，在真正需要使用的时候才加载那一部分？</p>
+<p>假设你页面的侧边栏上有一些tabs。点击tab会发出一个XHR请求获取内容，然后更新tab的内容，然后有一个更新的动画。如果这是页面上唯一需要XHR和动画库的地方，而用户又不点击tab的话会怎样？</p>
+<p>下面介绍按需加载模式。你可以创建一个<code>require()</code>函数或者方法，它接受一个需要被加载的脚本文件的文件名，还有一个在脚本被加载完毕后执行的回调函数。</p>
+<p><code>require()</code>函数可以被这样使用：</p>
+<pre><code>require(&quot;extra.js&quot;, function () {
+    functionDefinedInExtraJS();
+});
+</code></pre><p>我们来看一下如何实现这样一个函数。加载脚本很简单——你只需要按照动态<code>&lt;script&gt;</code>元素模式做就可以了。获知脚本已经加载需要一点点技巧，因为浏览器之间有差异：</p>
+<pre><code>function require(file, callback) {
+
+    var script = document.getElementsByTagName(&apos;script&apos;)[0], newjs = document.createElement(&apos;script&apos;);
+
+    // IE
+    newjs.onreadystatechange = function () {
+        if (newjs.readyState === &apos;loaded&apos; || newjs.readyState === &apos;complete&apos;) {
+            newjs.onreadystatechange = null;
+            callback();
+        }
+    };
+
+    // 其它浏览器
+    newjs.onload = function () {
+        callback();
+    };
+
+    newjs.src = file;
+    script.parentNode.insertBefore(newjs, script);
+}
+</code></pre><p>这个实现的几点说明：</p>
+<ul>
+<li>在IE中需要监听<code>readystatechange</code>事件，然后判断状态是否为<code>&quot;loaded&quot;</code>或者<code>&quot;complete&quot;</code>。其它的浏览器会忽略这里。</li>
+<li>在Firefox，Safari和Opera中，通过<code>onload</code>属性监听load事件。</li>
+<li>这个方法在Safari 2中无效。如果必须要处理这个浏览器，需要设一个定时器，周期性地去检查某个指定的变量（在脚本中定义的）是否有定义。当它变成已定义时，就意味着新的脚本已经被加载并执行。</li>
+</ul>
+<p>你可以通过建立一个人为延迟的脚本来测试这个实现（模拟网络延迟），比如<code>ondemand.js.php</code>，如：</p>
+<pre><code>&lt;?php
+header(&apos;Content-Type: application/javascript&apos;);
+sleep(1);
+?&gt;
+function extraFunction(logthis) {
+    console.log(&apos;loaded and executed&apos;);
+    console.log(logthis);
+}
+</code></pre><p>现在测试<code>require()</code>函数：</p>
+<pre><code>require(&apos;ondemand.js.php&apos;, function () {
+    extraFunction(&apos;loaded from the parent page&apos;);
+    document.body.appendChild(document.createTextNode(&apos;done!&apos;));
+});
+</code></pre><p>这段代码会在<code>console</code>中打印两条，然后页面中会显示<code>&quot;done!&quot;</code>，你可以在<a href="http://jspatterns.com/book/7/ondemand.html" target="_blank" rel="external">http://jspatterns.com/book/7/ondemand.html</a>看到示例。</p>
+<h3 id="预加载JavaScript"><a href="#预加载JavaScript" class="headerlink" title="预加载JavaScript"></a>预加载JavaScript</h3><p>在延迟加载模式和按需加载模式中，我们加载了当前页面需要用到的脚本，除此之外，我们也可以加载当前页面不需要但可能在接下来的页面中需要的脚本。这样的话，当用户进入第二个页面时，脚本已经被预加载过，整体体验会变得更快。</p>
+<p>预加载可以简单地通过动态脚本模式实现，但这也意味着脚本会被解析和执行。解析仅仅会在页面加载时间中增加预加载消耗的时间，但执行却可能导致JavaScript错误，因为预加载的脚本会假设自己运行在第二个页面上，比如找一个特定的DOM节点就可能出错。</p>
+<p>仅加载脚本而不解析和执行是可能的，这也同样适用于CSS和图像。</p>
+<p>在IE中，你可以使用熟悉的图片信标模式来发起请求：</p>
+<pre><code>new Image().src = &quot;preloadme.js&quot;;
+</code></pre><p>在其它的浏览器中，你可以使用<code>&lt;object&gt;</code>替代<code>script</code>元素，然后将它的<code>data</code>属性指向脚本的URL：</p>
+<pre><code>var obj = document.createElement(&apos;object&apos;);
+obj.data = &quot;preloadme.js&quot;;
+document.body.appendChild(obj);
+</code></pre><p>为了阻止<code>object</code>可见，你应该设置它的<code>width</code>和<code>height</code>属性为<code>0</code>。</p>
+<p>你可以创建一个通用的<code>preload()</code>函数或者方法，使用条件初始化模式（第四章）来处理浏览器差异：</p>
+<pre><code>var preload;
+if (/*@cc_on!@*/false) { // IE支持条件注释
+    preload = function (file) {
+        new Image().src = file;
+    };
+} else {
+    preload = function (file) {
+        var obj = document.createElement(&apos;object&apos;),
+            body = document.body;
+
+        obj.width = 0;
+        obj.height = 0;
+        obj.data = file;
+        body.appendChild(obj);
+    };
+}
+</code></pre><p>使用这个新函数：</p>
+<pre><code>preload(&apos;my_web_worker.js&apos;);
+</code></pre><p>这种模式的坏处在于存在用户代理（浏览器）嗅探，但这里无法避免，因为特性检测没有办法告知足够的浏览器行为信息。比如在这个模式中，理论上你可以测试<code>typeof Image</code>是否是<code>&quot;function&quot;</code>来代替嗅探，但这种方法其实没有作用，因为所有的浏览器都支持<code>new Image()</code>；只是有一些浏览器会为图片单独做缓存，意味着作为图片缓存下来的组件（文件）在第二个页面中不会被作为脚本取出来，而是会重新下载。</p>
+<blockquote>
+<p>浏览器嗅探中使用条件注释很有意思，这明显比在<code>navigator.userAgent</code>中找字符串要安全得多，因为用户可以很容易地修改这些字符串。<br>比如：<br>    var isIE = /<em>@cc_on!@</em>/false;<br>会在其它的浏览器中将<code>isIE</code>设为<code>false</code>（因为忽略了注释），但在IE中会是<code>true</code>，因为在条件注释中有取反运算符<code>!</code>。在IE中就像是这样：<br>    var isIE = !false; // true</p>
+</blockquote>
+<p>预加载模式可以被用于各种组件（文件），而不仅仅是脚本。比如在登录页就很有用，当用户开始输入用户名时，你可以使用打字的时间开始预加载（非敏感的东西），因为用户很可能会到第二个也就是登录后的页面。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>在前一章中我们讨论了JavaScript核心的模式，它们与环境无关，这一章主要关注了只在客户端浏览器环境中应用的模式。</p>
+<p>我们看了：</p>
+<ul>
+<li>分离的思想（HTML：内容，CSS：表现，JavaScript：行为），只用于增强体验的JavaScript以及基于特性检测的浏览器探测。（尽管在本章的最后你看到了如何打破这个模式。）</li>
+<li>DOM编程——加速DOM访问和操作的模式，主要通过将DOM操作集中在一起来实现，因为频繁和DOM打交道代码是很高的。</li>
+<li>事件，跨浏览器的事件处理，以及使用事件代码来减少事件处理函数的绑定数量以提高性能。</li>
+<li>两种处理长时间大计算量脚本的模式——使用<code>setTimeout()</code>将长时间操作拆分为小块执行和在现代浏览器中使用web workers。</li>
+<li>多种用于远程编程，进行服务器和客户端通讯的模式——XHR，JSONP，框架和图片信标。</li>
+<li>在生产环境中部署JavaScript的步骤——将脚本合并为更少的文件，压缩和gzip（总共节省85%），可能的话托管到CDN并发送<code>Expires</code>头来提升缓存效果。</li>
+<li>基于性能考虑引入页面脚本的模式，包括：放置<code>&lt;script&gt;</code>元素的位置，同时也可以从HTTP分块获益。为了减少页面初始化时加载大的脚本文件引起的初始化工作量，我们讨论了几种不同的模式，比如延迟加载、预加载和按需加载。</li>
+</ul>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/03/03/web/javascript复习笔记/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2015/03/15/web/js/chapter2/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>

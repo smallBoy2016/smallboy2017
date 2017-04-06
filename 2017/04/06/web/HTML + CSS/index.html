@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="HTML + CSS 笔记"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>HTML + CSS 笔记 - Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            HTML + CSS 笔记
+            
+          </h1>
+          <p class="posted-on">
+          2017-04-06
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/Web开发/" rel="tag">
+                  Web开发
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <p>[toc]</p>
+<h1 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML + CSS"></a>HTML + CSS</h1><h2 id="HTML语言"><a href="#HTML语言" class="headerlink" title="HTML语言"></a>HTML语言</h2><h3 id="一、HTML的语法"><a href="#一、HTML的语法" class="headerlink" title="一、HTML的语法"></a>一、HTML的语法</h3><h4 id="1-什么是HTML标记语言"><a href="#1-什么是HTML标记语言" class="headerlink" title="1.什么是HTML标记语言?"></a>1.什么是HTML标记语言?</h4><p><strong>HTML标记语言</strong>是表示网页信息的符号标记语言.</p>
+<ul>
+<li>可以设置文本的格式，比如标题、字号、文本颜色、段落等等</li>
+<li>可以创建列表</li>
+<li>可以插入图像和媒体</li>
+<li>可以建立表格</li>
+<li>超链接，可以使用鼠标点击超链接来实现页面之间的跳转</li>
+</ul>
+<h4 id="2-HTML的标记和它的属性"><a href="#2-HTML的标记和它的属性" class="headerlink" title="2.HTML的标记和它的属性"></a>2.HTML的标记和它的属性</h4><ul>
+<li>文档的保存格式：.html    .htm   .xhtml</li>
+<li>格式：&lt;标记&gt;内容&lt;/标记&gt;</li>
+<li>标记的属性，就是用来控制我们的内容如何显示，格式：&lt;标记 属性1=属性值  …&gt;内容 &lt;/标记&gt;<h4 id="3-语法不区分字母大小写"><a href="#3-语法不区分字母大小写" class="headerlink" title="3.语法不区分字母大小写"></a>3.语法不区分字母大小写</h4>在编写网页的时候尽量使用小写<h4 id="4-文档注释"><a href="#4-文档注释" class="headerlink" title="4.文档注释"></a>4.文档注释</h4>注释一段内容时，<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;!--这里是注释的内容--&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-字符实体"><a href="#5-字符实体" class="headerlink" title="5.字符实体"></a>5.字符实体</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">显示结果</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">实体名称</th>
+<th style="text-align:left">实体编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">空格</td>
+<td style="text-align:left">&amp;nbsp<pre>;</pre></td>
+<td style="text-align:left">&amp;#160<pre>;</pre></td>
+</tr>
+<tr>
+<td style="text-align:left">…</td>
+<td style="text-align:left">…</td>
+<td style="text-align:left">…</td>
+<td style="text-align:left">…</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二、HTML的基本结构"><a href="#二、HTML的基本结构" class="headerlink" title="二、HTML的基本结构"></a>二、HTML的基本结构</h3><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta name="keywords" content="web开发"/&gt;</div><div class="line">    //name的常用值：author,keywords,description,others</div><div class="line">    &lt;title&gt;网页的标题，显示在浏览器窗口的内容&lt;/title&gt;	  </div><div class="line">    &lt;style&gt;&lt;/style&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h3 id="三、文档设置标记"><a href="#三、文档设置标记" class="headerlink" title="三、文档设置标记"></a>三、文档设置标记</h3><h4 id="1-格式标记："><a href="#1-格式标记：" class="headerlink" title="1.格式标记："></a>1.格式标记：</h4><ul>
+<li>p 段落标记</li>
+<li>br 强制换行</li>
+<li>center 居中对齐</li>
+<li>pre 预格式化</li>
+<li>ul 无序列表</li>
+<li>ol 有序列表</li>
+<li>li 列表项目</li>
+<li>hr 水平分隔线</li>
+<li>div 层</li>
+</ul>
+<h4 id="2-文本标记"><a href="#2-文本标记" class="headerlink" title="2.文本标记"></a>2.文本标记</h4><ul>
+<li>h1~h6  标题</li>
+<li>font  字体</li>
+<li>b  粗字体</li>
+<li>i  斜字体</li>
+<li>sub  下标字体</li>
+<li>sup  上标</li>
+<li>em  强调，斜</li>
+<li>strong  强调，粗</li>
+<li>small  小型字体</li>
+<li>big  大型字体</li>
+<li>u  下划线字体</li>
+</ul>
+<h4 id="3-图像标记"><a href="#3-图像标记" class="headerlink" title="3.图像标记"></a>3.图像标记</h4><p>使用方法：<br><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src="路径/文件名.图片格式" width="属性值" height="属性值" border="属性值" alt="属性值"&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>img标记的属性</strong></p>
+<ul>
+<li>src  指定要加载的图片路径、名称和格式</li>
+<li>width  指定宽度</li>
+<li>height  高度</li>
+<li>border   边框</li>
+<li>alt  1.当网页上的图片加载完成后，鼠标移动到上面，会显示指定的属性文字。2、如果图像加载失败，会用文字来替代图像。3.搜索引擎可以通过这个属性的文字来抓取图片</li>
+</ul>
+<h4 id="4-超链接的使用"><a href="#4-超链接的使用" class="headerlink" title="4.超链接的使用"></a>4.超链接的使用</h4><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;a href="链接的地址，可以是网页，视音频，图片" target="打开方式" name="页面锚点名称"&gt;链接文字或者图片&lt;/a&gt;</div><div class="line">&lt;a name="页面中的锚点"&gt;&lt;/a&gt;</div></pre></td></tr></table></figure>
+<p>target属性</p>
+<ul>
+<li>_blank  在一个新的窗口中打开链接</li>
+<li>_seif (默认) 在当前窗口中打开链接</li>
+<li>_parent  在父窗口中打开页面（框架中使用较多）</li>
+<li>_top  在顶层窗口中打开文件（框架中使用较多）</li>
+</ul>
+<p>name属性</p>
+<h3 id="四、表格"><a href="#四、表格" class="headerlink" title="四、表格"></a>四、表格</h3><h4 id="table标记"><a href="#table标记" class="headerlink" title="table标记"></a>table标记</h4><p>基本格式：<br><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;table 属性1="属性值1" 属性2="属性值2" ...&gt;表格内容&lt;/table&gt;</div></pre></td></tr></table></figure></p>
+<p>table标记的属性</p>
+<ul>
+<li>width  表示表格的宽度，px , %</li>
+<li>height  表示表格的高度，px , %</li>
+<li>border  表示表格的外边框</li>
+<li>align  表格里的文字（默认）居左显示：left | center | right</li>
+<li>cellspacing  单元格之间的间距，默认2px</li>
+<li>cellpadding  单元格内容与单元格边框的显示距离</li>
+<li>frame  控制表格边框最外层的四条线框<br>void | above | below | hsides | lhs | rhs | vsides | box | border<br>无边框（默认）| 仅顶部有边框 | 底部 | 仅有顶部和底部 | 左侧 | 右侧 | 仅有左右边框 | 包含4个边框 | 包含4个边框</li>
+<li>rules  控制是否显示以及如何显示单元格之间的分隔线<br>none | all | rows | clos | groups<br>表示无分割线（默认）| 包括所有 | 仅有行 | 仅有列分割线 | 行组合列祖之间有分割线</li>
+</ul>
+<p><strong>tr,td组合可以参与页面布局</strong></p>
+<h4 id="caption标记"><a href="#caption标记" class="headerlink" title="caption标记"></a>caption标记</h4><p>如果使用表格需要标题，那么就可以使用caption标记，位于table标记之后tr标记之前。<br>属性<br>align : top | left | right | bottom<br>标题放在表格的上左右下部。</p>
+<h4 id="tr标记"><a href="#tr标记" class="headerlink" title="tr标记"></a>tr标记</h4><ul>
+<li>bgcolor=”颜色值”设置背景颜色</li>
+<li>align=”bottom | middle | top” 设置垂直方向对齐方式 </li>
+<li>valign=”left | right | center” 设置水平方向对齐方式<h4 id="td和th标记"><a href="#td和th标记" class="headerlink" title="td和th标记"></a>td和th标记</h4>td和th都是单元格的标记，其必须嵌套在tr标签内，是成对出现的<br>th是表头，td是数据标记，两者的标记属性都一样。</li>
+<li>bgcolor  背景色</li>
+<li>align 设置单元格对齐方式</li>
+<li>valign  设置单元格垂直对齐方式</li>
+<li>width</li>
+<li>height</li>
+<li>rowspan  设置单元格所占行数</li>
+<li>colspan  设置单元格所占列数</li>
+</ul>
+<h3 id="五、HTML框架"><a href="#五、HTML框架" class="headerlink" title="五、HTML框架"></a>五、HTML框架</h3><p>HTML框架将浏览器划分成不同的部分，每一部分加载不同的页面，实现在同一浏览器窗口中加载多个页面的效果。</p>
+<h4 id="frameset标记的属性"><a href="#frameset标记的属性" class="headerlink" title="frameset标记的属性"></a>frameset标记的属性</h4><ul>
+<li>cols  使用像素数，%分割左右窗口，” * “号表示剩余部分</li>
+<li>rows  分割上下窗口</li>
+<li>frameborder  指定是否显示边框，0不显示，1显示</li>
+<li>border  设置边框的大小，默认值是5像素</li>
+</ul>
+<h4 id="frame子窗口标记"><a href="#frame子窗口标记" class="headerlink" title="frame子窗口标记"></a>frame子窗口标记</h4><p>在frameset中设置了几个窗口，就必须对应使用几个frame，而且还必须使用src属性指定一个页面。</p>
+<ul>
+<li>src 加载网页文件的URL地址</li>
+<li>name  是链接笔记的target所要参数</li>
+<li>noresize  表示不能调整框架大小，没有</li>
+<li>scrolling  是否需要滚动条 auto | yes | no </li>
+<li>frameborder  指定是否显示边框，0不显示，1显示<br>语法格式：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">frameset</span> <span class="attr">rows</span>=<span class="string">"90,*,90"</span> <span class="attr">border</span>=<span class="string">"1"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">name</span>=<span class="string">"top"</span> <span class="attr">src</span>=<span class="string">"top.html"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">frameset</span> <span class="attr">cols</span>=<span class="string">"20%,80%"</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">name</span>=<span class="string">"left"</span> <span class="attr">src</span>=<span class="string">"left.html"</span>/&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">name</span>=<span class="string">"right"</span> <span class="attr">src</span>=<span class="string">"right.html"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">frameset</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">name</span>=<span class="string">"bottom"</span> <span class="attr">src</span>=<span class="string">"bottom.html"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">frameset</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="六、表单"><a href="#六、表单" class="headerlink" title="六、表单"></a>六、表单</h3><h4 id="form"><a href="#form" class="headerlink" title="form"></a>form</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"表单提交的服务器地址"</span> <span class="attr">name</span>=<span class="string">"表单名称"</span> <span class="attr">method</span>=<span class="string">"提交方式"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>get方式提交：会将表单的内容附加在URL地址后面，所以限制了提交的内容长度，不超过8192个字符，且不具备保密。</li>
+<li>post方式提交：将表单中的数据一并包含在表单主体中，一起传送到服务器中处理，没有数据大小地址限制。<br><strong>表单的其它属性</strong></li>
+<li>enctype  设置表单资料的编码方式</li>
+<li>target  和超链接的类似。</li>
+</ul>
+<h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">""</span> <span class="attr">name</span>=<span class="string">"定义控件的名称"</span> <span class="attr">size</span>=<span class="string">"控件长度"</span> <span class="attr">maxlength</span>=<span class="string">"输入框中最大允许输入的字符数"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line"> type=text | password</div><div class="line">*表示一个文本输入域 | 表示一个密码输入域</div><div class="line"> type=submit | reset | button </div><div class="line">*表示提交按钮 | 重置按钮 | 普通按钮</div><div class="line"> type=radio | checkbox </div><div class="line">*表示单选框和复选框，单选框都可以使用checked="checked"表示默认选项 </div><div class="line"> type=hidden </div><div class="line">*表示为隐藏表单域 </div><div class="line">--&gt;</div></pre></td></tr></table></figure>
+<h4 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">rows</span>=<span class="string">"行数"</span> <span class="attr">cols</span>=<span class="string">"列数"</span>&gt;</span>多行文本域<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="select"><a href="#select" class="headerlink" title="select"></a>select</h4><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">""</span>&gt;</span></span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"value1"</span> <span class="attr">selected</span>&gt;</span>选项一<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"value2"</span> <span class="attr">selected</span>&gt;</span>选项二<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"value3"</span> <span class="attr">selected</span>&gt;</span>选项三<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="CSS样式表"><a href="#CSS样式表" class="headerlink" title="CSS样式表"></a>CSS样式表</h2><h3 id="1-使用CSS样式的方式"><a href="#1-使用CSS样式的方式" class="headerlink" title="1.使用CSS样式的方式"></a>1.使用CSS样式的方式</h3><ul>
+<li>内嵌样式表</li>
+<li>嵌入式样式表</li>
+<li>引入式样式表</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"font-size:14px;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="2-定义样式表"><a href="#2-定义样式表" class="headerlink" title="2.定义样式表"></a>2.定义样式表</h3><h4 id="1-HTML标记定义"><a href="#1-HTML标记定义" class="headerlink" title="1.HTML标记定义"></a>1.HTML标记定义</h4><h4 id="2-class定义"><a href="#2-class定义" class="headerlink" title="2.class定义"></a>2.class定义</h4><h4 id="3-ID定义"><a href="#3-ID定义" class="headerlink" title="3.ID定义"></a>3.ID定义</h4><h4 id="4-组合选择器-同时控制多个元素"><a href="#4-组合选择器-同时控制多个元素" class="headerlink" title="4.组合选择器(同时控制多个元素)"></a>4.组合选择器(同时控制多个元素)</h4><h4 id="5-伪元素选择器-CSS3里的内容"><a href="#5-伪元素选择器-CSS3里的内容" class="headerlink" title="5.伪元素选择器(CSS3里的内容)"></a>5.伪元素选择器(CSS3里的内容)</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div><div class="line"><span class="selector-class">.p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div><div class="line"><span class="selector-id">#p</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div><div class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>&#123;<span class="attribute">font-size</span>:<span class="number">12px</span>;&#125;</div></pre></td></tr></table></figure>
+<p><strong>优先级：ID&gt;class&gt;HTML</strong></p>
+<h3 id="3-常见属性"><a href="#3-常见属性" class="headerlink" title="3.常见属性"></a>3.常见属性</h3><h4 id="1-颜色属性"><a href="#1-颜色属性" class="headerlink" title="1.颜色属性"></a>1.颜色属性</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;<span class="attribute">color</span>:red;&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;<span class="attribute">color</span>:<span class="number">#ff6600</span>;&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;<span class="attribute">color</span>:<span class="built_in">rgb</span>(255,255,255);&#125;</div><div class="line"><span class="selector-tag">p</span>&#123;<span class="attribute">color</span>:<span class="built_in">rgba</span>(255,255,255,1);&#125;</div></pre></td></tr></table></figure>
+<h4 id="2-字体属性"><a href="#2-字体属性" class="headerlink" title="2.字体属性"></a>2.字体属性</h4><h5 id="font-size"><a href="#font-size" class="headerlink" title="font-size"></a>font-size</h5><ul>
+<li>px 设置一个固定值</li>
+<li>%  父元素的百分比</li>
+<li>smaller  比父元素更小</li>
+<li>larger  比父元素更大</li>
+<li>inherit  继承父元素的<h5 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h5>font-family: Microsoft Yahei, serif;<br>可以使用逗号2隔开，以确保字体不存在的时候直接使用下一个字体。<h5 id="font-weight"><a href="#font-weight" class="headerlink" title="font-weight"></a>font-weight</h5></li>
+<li>normal  默认值400</li>
+<li>bold  粗700</li>
+<li>bolder  更粗</li>
+<li>lighter  更细<h5 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a>font-style</h5></li>
+<li>normal  政策</li>
+<li>italic  斜体</li>
+<li>oblique  倾斜</li>
+<li>inherit  继承<h4 id="3-背景颜色"><a href="#3-背景颜色" class="headerlink" title="3.背景颜色"></a>3.背景颜色</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*背景色*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-color</span>:<span class="number">#b0c4de</span>;&#125;</div><div class="line"><span class="comment">/*背景图像*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">'bgdesert.jpg'</span>);&#125;</div><div class="line"><span class="comment">/*水平平铺*/</span></div><div class="line"><span class="selector-tag">body</span></div><div class="line">&#123;</div><div class="line"><span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">'gradient2.png'</span>);</div><div class="line"><span class="attribute">background-repeat</span>:repeat-x;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*不平铺*/</span></div><div class="line"><span class="selector-tag">background-repeat</span><span class="selector-pseudo">:no-repeat</span>;</div><div class="line"></div><div class="line"><span class="comment">/*简写属性*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">background</span>:<span class="number">#ffffff</span> <span class="built_in">url</span>(<span class="string">'img_tree.png'</span>) no-repeat right top;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="4-文本属性"><a href="#4-文本属性" class="headerlink" title="4.文本属性"></a>4.文本属性</h4><ul>
+<li>text-align: left | center | right  横向排列</li>
+<li>line-height:  文本行高</li>
+<li>tex-indent  首行缩进</li>
+<li>letter-spacing  字符间距（可设置数值）</li>
+<li>word-spacing  单词间距（可设置数值）</li>
+<li>direction: ltr | rtl   文本方向,默认从左到右，</li>
+<li>text-transform: none | capitalize | uppercase | lowercase | inherit<br>默认 | 单词首字母大写 | 大写字母 | 小写字母 | 继承父元素的</li>
+</ul>
+<h4 id="5-边框属性"><a href="#5-边框属性" class="headerlink" title="5.边框属性"></a>5.边框属性</h4><ul>
+<li>dotted:定义一个点线边框</li>
+<li>dashed: 定义一个虚线边框</li>
+<li>solid: 定义实线边框<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">border</span><span class="selector-pseudo">:5px</span> <span class="selector-tag">solid</span> <span class="selector-tag">red</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="6-列表属性"><a href="#6-列表属性" class="headerlink" title="6.列表属性"></a>6.列表属性</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span><span class="selector-class">.a</span> &#123;<span class="attribute">list-style-type</span>: circle;&#125;<span class="comment">/*空心圆*/</span></div><div class="line"><span class="selector-tag">ul</span><span class="selector-class">.b</span> &#123;<span class="attribute">list-style-type</span>: square;&#125;<span class="comment">/*实心方块*/</span></div><div class="line"> </div><div class="line"><span class="selector-tag">ol</span><span class="selector-class">.c</span> &#123;<span class="attribute">list-style-type</span>: upper-roman;&#125;<span class="comment">/*罗马字符*/</span></div><div class="line"><span class="selector-tag">ol</span><span class="selector-class">.d</span> &#123;<span class="attribute">list-style-type</span>: lower-alpha;&#125;<span class="comment">/*小写字母*/</span></div><div class="line"><span class="comment">/**</span></div><div class="line">lower-roman  小写罗马字符</div><div class="line">upper-roman  大写</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">/*将图象设置为列表项标志。*/</span></div><div class="line"><span class="selector-tag">ul</span></div><div class="line">&#123;</div><div class="line">    <span class="attribute">list-style-image</span>: <span class="built_in">url</span>(<span class="string">'sqpurple.gif'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-DIV-CSS布局"><a href="#4-DIV-CSS布局" class="headerlink" title="4.DIV+CSS布局"></a>4.DIV+CSS布局</h3><h4 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h4><p><img src="/images/Web/box-model.gif" alt=""></p>
+<h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><p>position: relative | fixed | absolute</p>
+<p>定位距离：left、right、top、bottom<br>覆盖优先顺序：z-index : 1 (数值越大越优先)</p>
+<p>display : none | block | inline<br>层不显示，块显示，内联显示</p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/2017/04/04/强迫症的 Mac 设置指南/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>

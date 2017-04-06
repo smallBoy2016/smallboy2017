@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="基础概念"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>基础概念 - Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            基础概念
+            
+          </h1>
+          <p class="posted-on">
+          2017-03-03
+          </p>
+          <div class="tags-links">
+            
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p><strong>定义变量：</strong><br>var a = 10;<br>var(数据类型) a(变量) = 10(字面值);</p>
+<p><strong>变量命名规则：</strong><br>以字母，美元符号，下划线开头的其他任意组合<br>一些特殊字符关键字是不允许定义变量的，如：js关键字 </p>
+<p>开发过程中尽量是使用英文定义变量名，并且还要见名知意。</p>
+<a id="more"></a>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数字类型（number）"><a href="#数字类型（number）" class="headerlink" title="数字类型（number）"></a>数字类型（number）</h3><p>var num = 10;var pi = 3.1415926;</p>
+<h3 id="字符串（string）"><a href="#字符串（string）" class="headerlink" title="字符串（string）"></a>字符串（string）</h3><p>var c = “A”;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> words = <span class="string">'新浪网是个网站'</span>;</div><div class="line"></div><div class="line">获取字符串的长度</div><div class="line">words.length == <span class="number">7</span> </div><div class="line">获取字符串下标为<span class="number">0</span>的字符</div><div class="line">words.charAt(<span class="number">0</span>) == <span class="string">"新"</span></div><div class="line">获取字符串最后一位字符</div><div class="line">words.charAt( words.length<span class="number">-1</span> ) == <span class="string">"站"</span></div><div class="line"></div><div class="line">返回字符串中的子字符所在的索引值，第一次出现的位置。</div><div class="line">words.indexOf(<span class="string">'网'</span>) == <span class="number">2</span></div><div class="line">倒序查找</div><div class="line">words.lastIndexOf(<span class="string">'网'</span>) == <span class="number">5</span></div><div class="line"><span class="number">1</span>替换前，<span class="number">2</span>替换后</div><div class="line">words.replace(<span class="string">'新浪网'</span>,<span class="string">'sina'</span>) <span class="comment">//替换功能</span></div><div class="line"></div><div class="line"><span class="comment">//按某个字符进行切割，并返回数组</span></div><div class="line"><span class="keyword">var</span> words = <span class="string">'新浪网,是个网站'</span>;</div><div class="line"><span class="keyword">var</span> words.split(<span class="string">','</span>);</div><div class="line">返回结果是数组[<span class="string">"新浪网"</span>,<span class="string">"是个网站"</span>]</div><div class="line"></div><div class="line">其他</div><div class="line">s.trim()  <span class="comment">//用于去除字符串两端的空格，返回一个新字符串</span></div><div class="line">s.slice(start,end)   </div><div class="line"><span class="comment">//用于从原字符串取出子字符串并返回，不改变原字符串。第一个参数是子字符串的开始位置，第二个参数是子字符串的结束位置（不含该位置）。如果参数是负值，表示从结尾开始倒数计算的位置，即该负值加上字符串长度。</span></div><div class="line">s.substring(start,end)  </div><div class="line"><span class="comment">//用于从原字符串取出子字符串并返回，不改变原字符串.第一个参数表示子字符串的开始位置，第二个位置表示结束位置。</span></div><div class="line">s.substr(start,length)   </div><div class="line"><span class="comment">//用于从原字符串取出子字符串并返回，不改变原字符串。第一个参数是子字符串的开始位置，第二个参数是子字符串的长度。如果第一个参数是负数，表示倒数计算的字符位置。如果第二个参数是负数，将被自动转为0，因此会返回空字符串。</span></div><div class="line"></div><div class="line">s.match(regexp)   </div><div class="line"><span class="comment">//用于确定原字符串是否匹配某个子字符串，返回一个数组，成员为匹配的第一个字符串。如果没有找到匹配，则返回null。</span></div><div class="line">s.search()  </div><div class="line"><span class="comment">//返回值为匹配的第一个位置。如果没有找到匹配，则返回-1。</span></div></pre></td></tr></table></figure>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"><span class="keyword">var</span> primes = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> misc = [<span class="number">1.1</span>,<span class="literal">true</span>,”a”];</div><div class="line"></div><div class="line">primes[<span class="number">3</span>] = <span class="number">11</span>;  <span class="comment">//在索引3上添加一个值</span></div><div class="line">primes.push(<span class="number">14</span>)  <span class="comment">//在数组末尾追加一个值14</span></div><div class="line">primes.pop()     <span class="comment">//删除数组最后一个值</span></div><div class="line">primes.shift()   <span class="comment">//删除数组第一个值</span></div><div class="line"></div><div class="line"><span class="keyword">delete</span> primes[<span class="number">3</span>] <span class="comment">//删除索引上的值，索引还在</span></div><div class="line">primes.splice(<span class="number">3</span>) <span class="comment">//值和索引一起删除</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = primes.concat(misc);  <span class="comment">//合并两个数组成一个数组 ,相同的值并不合并。</span></div></pre></td></tr></table></figure>
+<h3 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">Math</span>.abs()：返回参数的绝对值  </div><div class="line"><span class="built_in">Math</span>.ceil()：向上取整，接受一个参数，返回大于该参数的最小整数。 </div><div class="line"><span class="built_in">Math</span>.floor()：向下取整  </div><div class="line"><span class="built_in">Math</span>.max(n,n1,...)：可接受多个参数，返回最大值  </div><div class="line"><span class="built_in">Math</span>.min(n,n1,..)：可接受多个参数，返回最小值 </div><div class="line"></div><div class="line"><span class="built_in">Math</span>.round()：四舍五入  </div><div class="line"><span class="built_in">Math</span>.random()：返回<span class="number">0</span>到<span class="number">1</span>之间的一个伪随机数，可能等于<span class="number">0</span>，但是一定小于<span class="number">1</span>。</div></pre></td></tr></table></figure>
+<h4 id="console对象"><a href="#console对象" class="headerlink" title="console对象"></a>console对象</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">console</span>.log(text,text2,...)  </div><div class="line"><span class="comment">//用于在console窗口输出信息。它可以接受多个参数，将它们的结果连接起来输出。如果第一个参数是格式字符串（使用了格式占位符），console.log方法将依次用后面的参数替换占位符，然后再进行输出。</span></div><div class="line"><span class="built_in">console</span>.info()   <span class="comment">//在console窗口输出信息，同时，会在输出信息的前面，加上一个蓝色图标。</span></div><div class="line"><span class="built_in">console</span>.debug()  <span class="comment">//在console窗口输出信息，同时，会在输出信息的前面，加上一个蓝色图标。</span></div><div class="line"><span class="built_in">console</span>.warn()  <span class="comment">//输出信息时，在最前面加一个黄色三角，表示警告；</span></div><div class="line"><span class="built_in">console</span>.error()  <span class="comment">//输出信息时，在最前面加一个红色的叉，表示出错，同时会显示错误发生的堆栈</span></div><div class="line"><span class="built_in">console</span>.table()  <span class="comment">//可以将复合类型的数据转为表格显示。</span></div><div class="line"><span class="built_in">console</span>.count()  <span class="comment">//用于计数，输出它被调用了多少次。</span></div><div class="line"><span class="built_in">console</span>.dir()    <span class="comment">//用来对一个对象进行检查（inspect），并以易于阅读和打印的格式显示。</span></div><div class="line"><span class="built_in">console</span>.dirxml()  <span class="comment">//用于以目录树的形式，显示DOM节点。</span></div><div class="line"><span class="built_in">console</span>.assert()  <span class="comment">//接受两个参数，第一个参数是表达式，第二个参数是字符串。只有当第一个参数为false，才会输出第二个参数，否则不会有任何结果。</span></div><div class="line"></div><div class="line"><span class="comment">//这两个方法用于计时，可以算出一个操作所花费的准确时间。</span></div><div class="line"><span class="built_in">console</span>.time()</div><div class="line"><span class="built_in">console</span>.timeEnd()</div><div class="line"><span class="comment">//time方法表示计时开始，timeEnd方法表示计时结束。它们的参数是计时器的名称。调用timeEnd方法之后，console窗口会显示“计时器名称: 所耗费的时间”。</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.profile()  <span class="comment">//用来新建一个性能测试器（profile），它的参数是性能测试器的名字。</span></div><div class="line"><span class="built_in">console</span>.profileEnd()  <span class="comment">//用来结束正在运行的性能测试器。</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.group()</div><div class="line"><span class="built_in">console</span>.groupend()</div><div class="line"><span class="comment">//上面这两个方法用于将显示的信息分组。它只在输出大量信息时有用，分在一组的信息，可以用鼠标折叠/展开。</span></div><div class="line"><span class="built_in">console</span>.groupCollapsed()  <span class="comment">//用于将显示的信息分组，该组的内容，在第一次显示时是收起的（collapsed），而不是展开的。</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.trace()  <span class="comment">//显示当前执行的代码在堆栈中的调用路径。</span></div><div class="line"><span class="built_in">console</span>.clear()  <span class="comment">//用于清除当前控制台的所有输出，将光标回置到第一行。</span></div></pre></td></tr></table></figure>
+<p><strong>boolean类型</strong> ，只有两个值true/false<br><strong>日期[Date]</strong><br>    undefined<br><strong>函数类型 function类型</strong><br><strong>对象【object】</strong><br>        object类型 :    date/数组/object/null<br>检测数据类型的方法： typeof()</p>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><p><strong>if…else</strong></p>
+<h4 id="switch…case语句"><a href="#switch…case语句" class="headerlink" title="switch…case语句"></a><strong>switch…case语句</strong></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> weather = <span class="string">'1'</span>;</div><div class="line"><span class="keyword">switch</span> (weather) &#123;</div><div class="line">	<span class="keyword">case</span> <span class="string">'1'</span>:</div><div class="line">		alert(<span class="string">'这是1'</span>);</div><div class="line">		<span class="keyword">break</span>;</div><div class="line">	<span class="keyword">case</span> <span class="string">'2'</span>:</div><div class="line">		alert(<span class="string">'这是2'</span>);</div><div class="line">		<span class="keyword">break</span>;</div><div class="line">	<span class="keyword">default</span>:</div><div class="line">		alert(<span class="string">'这什么都不是'</span>);</div><div class="line">		<span class="keyword">break</span>;	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//case 后面的值匹配，则执行下面的这条语句，执行完break返回</span></div><div class="line"><span class="comment">//case 匹配不到，则执行default语句</span></div></pre></td></tr></table></figure>
+<p><strong>while循环</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</div><div class="line"><span class="keyword">while</span> (i&lt;<span class="number">10</span>) &#123;</div><div class="line">	i++;</div><div class="line">	<span class="keyword">if</span> (i%<span class="number">2</span> ===<span class="number">0</span>) &#123;</div><div class="line">		<span class="keyword">continue</span>;<span class="comment">//跳出while循环</span></div><div class="line">	&#125;</div><div class="line">	<span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>for循环</strong></p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p><strong>给对象添加属性和方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> beyond = &#123;</div><div class="line">	<span class="attr">name</span> : <span class="string">'黄家驹'</span>,</div><div class="line">	<span class="attr">artist</span> : [<span class="string">'1'</span>,<span class="string">'2'</span>]</div><div class="line">&#125;</div><div class="line">beyond.showArtist = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">document</span>.writeln(<span class="keyword">this</span>.name);<span class="comment">//在浏览器中书写</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">**循环输出对象里属性**</div><div class="line"><span class="keyword">var</span> property;</div><div class="line"><span class="keyword">for</span> (property <span class="keyword">in</span> beyond)&#123;</div><div class="line">	<span class="built_in">console</span>.log(beyond[property]);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="DOM中获取元素的方法："><a href="#DOM中获取元素的方法：" class="headerlink" title="DOM中获取元素的方法："></a>DOM中获取元素的方法：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'div'</span>);<span class="comment">//获取DOM树上ID</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'p'</span>);<span class="comment">//获取DOM树上标签元素</span></div><div class="line"></div><div class="line"><span class="built_in">document</span>.querySelector()</div><div class="line"><span class="comment">//可以获取标签，class,id元素，第一个，下面的是所有的。</span></div><div class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'.div'</span>);</div></pre></td></tr></table></figure>
+<h3 id="DOM中一些元素的属性"><a href="#DOM中一些元素的属性" class="headerlink" title="DOM中一些元素的属性"></a>DOM中一些元素的属性</h3><p><strong>nodeName:</strong>元素的标签名称<br><strong>innerText:</strong>元素的文本内容<br><strong>parentNode:</strong>元素的父节点<br><strong>previousElementSibling</strong>上一个兄弟节点<br><strong>nextElementSibling</strong>下一个兄弟节点</p>
+<p><strong>childNodes:</strong>获取元素的子节点（包含元素节点，和文本节点）<br><strong>childElementCount:</strong>获取元素类型子节点的个数<br><strong>firstElementChild:</strong>获取第一个元素类型的子节点<br><strong>lastElementChild:</strong>获取最后一个元素类型的子节点</p>
+<h3 id="DOM节点的增删改"><a href="#DOM节点的增删改" class="headerlink" title="DOM节点的增删改"></a>DOM节点的增删改</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newLi = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> newText = <span class="built_in">document</span>.createTextNode(<span class="string">'张三'</span>);</div><div class="line">newLi.innerText = newText;</div><div class="line"></div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>).appendChild(newLi);</div><div class="line"><span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>).removeChild(newLi);</div><div class="line"><span class="comment">//在ul标签下，添加一个新创建的子标签，位于最后一个。</span></div><div class="line">.insertBefore()</div><div class="line"><span class="comment">//添加到在什么之前。</span></div></pre></td></tr></table></figure>
+<p>##事件Event<br><strong>onclick:</strong>鼠标单击事件<br><strong>onmouseover:</strong>鼠标移动到DIV区域<br><strong>onmouseot:</strong>鼠标离开DIV区域</p>
+<p><strong>事件绑定：addEventListener</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"><span class="comment">//如果给JavaScript代码标志为“严格模式”，则其中运行的所有代码都必然是严格模式下的。 其一：如果在语法检测时发现语法问题，则整个代码块失效，并导致一个语法异常。 其二：如果在运行期出现了违反严格模式的代码，则抛出执行异常。</span></div><div class="line"></div><div class="line"><span class="comment">//注：经过测试IE6,7,8,9均不支持严格模式。</span></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'.btn'</span>);</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">showMessage</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(event);</div><div class="line">		event.stopPropagation();<span class="comment">//停止事件传播</span></div><div class="line">	&#125;</div><div class="line">	btn.addEventListener(<span class="string">'click'</span>,showMessage,<span class="literal">false</span>);	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##ECMAScript 6新功能<br><strong>let</strong>声明一个块级变量{}，即大括号里的变量。外面是访问不到的。<br><strong>const</strong>声明一个恒量，不可以重新声明一个值，但可以追加值。<br><strong>解构数组</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">break</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span>  [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'b'</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">let</span> [A,B,C] = breakfast();</div><div class="line"><span class="built_in">console</span>.log(A,B,C);<span class="comment">//a,b,c</span></div></pre></td></tr></table></figure></p>
+<p><strong>模板字符串：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">'xixi'</span>,</div><div class="line">	age = <span class="number">19</span>;</div><div class="line"><span class="keyword">let</span> summary = <span class="string">`他的名字是<span class="subst">$&#123;name&#125;</span>，年龄是<span class="subst">$&#123;age&#125;</span>`</span>;</div><div class="line">cosole.lgo(summary);</div></pre></td></tr></table></figure></p>
+<p><strong>字符串的相关操作</strong><br>startsWith()  判断一个字符是不是以某字符串开头。<br>endsWith()  判断一个字符是不是以某字符串结尾。<br>includes()  判断一个字符串是不是包含某个字符串</p>
+<p><strong>给函数形参设置默认值</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x=<span class="number">1</span>,y=<span class="number">2</span></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;x&#125;</span>+<span class="subst">$&#123;y&#125;</span>`</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>数组的…</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span></div><div class="line"><span class="keyword">let</span> name = [<span class="string">'zhangsan'</span>,<span class="string">'lisi'</span>],</div><div class="line">	name2 = [<span class="string">'wang'</span>,...name];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name2);<span class="comment">//wang,zhangsan,lisi</span></div><div class="line"><span class="number">2.</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y,...arr</span>)</span>&#123;</div><div class="line">	<span class="comment">//函数剩余的参数，都放在arr数组中。</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> breakfast = <span class="function">(<span class="params">dessert,drink</span>) =&gt;</span> dessert + drink;</div><div class="line">普通函数</div><div class="line"><span class="keyword">var</span> breakfast = <span class="function"><span class="keyword">function</span> <span class="title">breakfast</span>(<span class="params">dessert,drink</span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> dessert + drink;</div><div class="line">&#125;</div><div class="line">如果不返回结果,执行代码</div><div class="line"><span class="keyword">let</span> breakfast = <span class="function">(<span class="params">dessert,drink</span>) =&gt;</span> &#123;</div><div class="line">	<span class="comment">//执行代码</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="对象表达式"><a href="#对象表达式" class="headerlink" title="对象表达式"></a>对象表达式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">原来的</div><div class="line"><span class="keyword">let</span> student = &#123;</div><div class="line">	<span class="attr">play</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;</div><div class="line">改进的</div><div class="line"><span class="keyword">let</span> student = &#123;</div><div class="line">	play()&#123;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> drink = <span class="string">'hot name'</span>;</div><div class="line">student[<span class="string">'hot name'</span>] = <span class="string">'wang'</span>;</div><div class="line">student[drink] = <span class="string">'wang'</span>;</div><div class="line"><span class="comment">//给对象添加带空格的属性。</span></div><div class="line"><span class="comment">//属性也可以用变量来表示</span></div></pre></td></tr></table></figure>
+<p>##chrome调制工具</p>
+<blockquote>
+<p>alt+cmd+j    快速开启控制台<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+</blockquote>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/03/06/时间管理/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2015/03/15/web/js/chapter8/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>

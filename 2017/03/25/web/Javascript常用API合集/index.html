@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="JS常用API"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>JS常用API - Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            JS常用API
+            
+          </h1>
+          <p class="posted-on">
+          2017-03-25
+          </p>
+          <div class="tags-links">
+            
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <p>#Javascript常用API合集</p>
+<h2 id="一、节点"><a href="#一、节点" class="headerlink" title="一、节点"></a>一、节点</h2><h3 id="1-1节点属性"><a href="#1-1节点属性" class="headerlink" title="1.1节点属性"></a>1.1节点属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Node.nodeName   <span class="comment">//返回节点名称，只读</span></div><div class="line">Node.nodeType   <span class="comment">//返回节点类型的常数值，只读</span></div><div class="line">Node.nodeValue  <span class="comment">//返回Text或Comment节点的文本值，只读</span></div><div class="line">Node.textContent  <span class="comment">//返回当前节点和它的所有后代节点的文本内容，可读写</span></div><div class="line">Node.baseURI    <span class="comment">//返回当前网页的绝对路径</span></div><div class="line"></div><div class="line">Node.ownerDocument  <span class="comment">//返回当前节点所在的顶层文档对象，即document</span></div><div class="line">Node.nextSibling  <span class="comment">//返回紧跟在当前节点后面的第一个兄弟节点</span></div><div class="line">Node.previousSibling  <span class="comment">//返回当前节点前面的、距离最近的一个兄弟节点</span></div><div class="line">Node.parentNode   <span class="comment">//返回当前节点的父节点</span></div><div class="line">Node.parentElement  <span class="comment">//返回当前节点的父Element节点</span></div><div class="line">Node.childNodes   <span class="comment">//返回当前节点的所有子节点</span></div><div class="line">Node.firstChild  <span class="comment">//返回当前节点的第一个子节点</span></div><div class="line">Node.lastChild   <span class="comment">//返回当前节点的最后一个子节点</span></div><div class="line"></div><div class="line"><span class="comment">//parentNode接口</span></div><div class="line">Node.children  <span class="comment">//返回指定节点的所有Element子节点</span></div><div class="line">Node.firstElementChild  <span class="comment">//返回当前节点的第一个Element子节点</span></div><div class="line">Node.lastElementChild   <span class="comment">//返回当前节点的最后一个Element子节点</span></div><div class="line">Node.childElementCount  <span class="comment">//返回当前节点所有Element子节点的数目。</span></div></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="1-2操作"><a href="#1-2操作" class="headerlink" title="1.2操作"></a>1.2操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Node.appendChild(node)   <span class="comment">//向节点添加最后一个子节点</span></div><div class="line">Node.hasChildNodes()   <span class="comment">//返回布尔值，表示当前节点是否有子节点</span></div><div class="line">Node.cloneNode(<span class="literal">true</span>);  <span class="comment">// 默认为false(克隆节点), true(克隆节点及其属性，以及后代)</span></div><div class="line">Node.insertBefore(newNode,oldNode)  <span class="comment">// 在指定子节点之前插入新的子节点</span></div><div class="line">Node.removeChild(node)   <span class="comment">//删除节点，在要删除节点的父节点上操作</span></div><div class="line">Node.replaceChild(newChild,oldChild)  <span class="comment">//替换节点</span></div><div class="line">Node.contains(node)  <span class="comment">//返回一个布尔值，表示参数节点是否为当前节点的后代节点。</span></div><div class="line">Node.compareDocumentPosition(node)   <span class="comment">//返回一个7个比特位的二进制值，表示参数节点和当前节点的关系</span></div><div class="line">Node.isEqualNode(noe)  <span class="comment">//返回布尔值，用于检查两个节点是否相等。所谓相等的节点，指的是两个节点的类型相同、属性相同、子节点相同。</span></div><div class="line">Node.normalize()   <span class="comment">//用于清理当前节点内部的所有Text节点。它会去除空的文本节点，并且将毗邻的文本节点合并成一个。</span></div><div class="line"></div><div class="line"><span class="comment">//ChildNode接口</span></div><div class="line">Node.remove()  <span class="comment">//用于删除当前节点</span></div><div class="line">Node.before()  <span class="comment">//</span></div><div class="line">Node.after()</div><div class="line">Node.replaceWith()</div></pre></td></tr></table></figure>
+<h3 id="1-3Document节点"><a href="#1-3Document节点" class="headerlink" title="1.3Document节点"></a>1.3Document节点</h3><h4 id="1-3-1Document节点属性"><a href="#1-3-1Document节点属性" class="headerlink" title="1.3.1Document节点属性"></a>1.3.1Document节点属性</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.doctype   <span class="comment">//</span></div><div class="line"><span class="built_in">document</span>.documentElement  <span class="comment">//返回当前文档的根节点</span></div><div class="line"><span class="built_in">document</span>.defaultView   <span class="comment">//返回document对象所在的window对象</span></div><div class="line"><span class="built_in">document</span>.body   <span class="comment">//返回当前文档的&lt;body&gt;节点</span></div><div class="line"><span class="built_in">document</span>.head   <span class="comment">//返回当前文档的&lt;head&gt;节点</span></div><div class="line"><span class="built_in">document</span>.activeElement  <span class="comment">//返回当前文档中获得焦点的那个元素。</span></div><div class="line"></div><div class="line"><span class="comment">//节点集合属性</span></div><div class="line"><span class="built_in">document</span>.links  <span class="comment">//返回当前文档的所有a元素</span></div><div class="line"><span class="built_in">document</span>.forms  <span class="comment">//返回页面中所有表单元素</span></div><div class="line"><span class="built_in">document</span>.images  <span class="comment">//返回页面中所有图片元素</span></div><div class="line"><span class="built_in">document</span>.embeds  <span class="comment">//返回网页中所有嵌入对象</span></div><div class="line"><span class="built_in">document</span>.scripts  <span class="comment">//返回当前文档的所有脚本</span></div><div class="line"><span class="built_in">document</span>.styleSheets  <span class="comment">//返回当前网页的所有样式表</span></div><div class="line"></div><div class="line"><span class="comment">//文档信息属性</span></div><div class="line"><span class="built_in">document</span>.documentURI  <span class="comment">//表示当前文档的网址</span></div><div class="line"><span class="built_in">document</span>.URL  <span class="comment">//返回当前文档的网址</span></div><div class="line"><span class="built_in">document</span>.domain  <span class="comment">//返回当前文档的域名</span></div><div class="line"><span class="built_in">document</span>.lastModified  <span class="comment">//返回当前文档最后修改的时间戳</span></div><div class="line"><span class="built_in">document</span>.location  <span class="comment">//返回location对象，提供当前文档的URL信息</span></div><div class="line"><span class="built_in">document</span>.referrer  <span class="comment">//返回当前文档的访问来源</span></div><div class="line"><span class="built_in">document</span>.title    <span class="comment">//返回当前文档的标题</span></div><div class="line"><span class="built_in">document</span>.characterSet属性返回渲染当前文档的字符集，比如UTF<span class="number">-8</span>、ISO<span class="number">-8859</span><span class="number">-1</span>。</div><div class="line"><span class="built_in">document</span>.readyState  <span class="comment">//返回当前文档的状态</span></div><div class="line"><span class="built_in">document</span>.designMode  <span class="comment">//控制当前文档是否可编辑，可读写</span></div><div class="line"><span class="built_in">document</span>.compatMode  <span class="comment">//返回浏览器处理文档的模式</span></div><div class="line"><span class="built_in">document</span>.cookie   <span class="comment">//用来操作Cookie</span></div></pre></td></tr></table></figure>
+<h4 id="1-3-2DOM节点的方法"><a href="#1-3-2DOM节点的方法" class="headerlink" title="1.3.2DOM节点的方法"></a>1.3.2DOM节点的方法</h4><p><strong>读写方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.open()   <span class="comment">//用于新建并打开一个文档</span></div><div class="line"><span class="built_in">document</span>.close()   <span class="comment">//不安比open方法所新建的文档</span></div><div class="line"><span class="built_in">document</span>.write()   <span class="comment">//用于向当前文档写入内容</span></div><div class="line"><span class="built_in">document</span>.writeIn()  <span class="comment">//用于向当前文档写入内容，尾部添加换行符。</span></div></pre></td></tr></table></figure></p>
+<p><strong>查找节点</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.querySelector(selectors)   <span class="comment">//接受一个CSS选择器作为参数，返回第一个匹配该选择器的元素节点。</span></div><div class="line"><span class="built_in">document</span>.querySelectorAll(selectors)  <span class="comment">//接受一个CSS选择器作为参数，返回所有匹配该选择器的元素节点。</span></div><div class="line"><span class="built_in">document</span>.getElementsByTagName(tagName)  <span class="comment">//返回所有指定HTML标签的元素</span></div><div class="line"><span class="built_in">document</span>.getElementsByClassName(className)   <span class="comment">//返回包括了所有class名字符合指定条件的元素</span></div><div class="line"><span class="built_in">document</span>.getElementsByName(name)   <span class="comment">//用于选择拥有name属性的HTML元素（比如&lt;form&gt;、&lt;radio&gt;、&lt;img&gt;、&lt;frame&gt;、&lt;embed&gt;和&lt;object&gt;等）</span></div><div class="line"><span class="built_in">document</span>.getElementById(id)   <span class="comment">//返回匹配指定id属性的元素节点。</span></div><div class="line"><span class="built_in">document</span>.elementFromPoint(x,y)  <span class="comment">//返回位于页面指定位置最上层的Element子节点。</span></div></pre></td></tr></table></figure></p>
+<p><strong>生成节点</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.createElement(tagName)   <span class="comment">//用来生成HTML元素节点。</span></div><div class="line"><span class="built_in">document</span>.createTextNode(text)   <span class="comment">//用来生成文本节点</span></div><div class="line"><span class="built_in">document</span>.createAttribute(name)  <span class="comment">//生成一个新的属性对象节点，并返回它。</span></div><div class="line"><span class="built_in">document</span>.createDocumentFragment()  <span class="comment">//生成一个DocumentFragment对象</span></div></pre></td></tr></table></figure></p>
+<p><strong>事件方法</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.createEvent(type)   <span class="comment">//生成一个事件对象，该对象能被element.dispatchEvent()方法使用</span></div><div class="line"><span class="built_in">document</span>.addEventListener(type,listener,capture)  <span class="comment">//注册事件</span></div><div class="line"><span class="built_in">document</span>.removeEventListener(type,listener,capture)  <span class="comment">//注销事件</span></div><div class="line"><span class="built_in">document</span>.dispatchEvent(event)  <span class="comment">//触发事件</span></div></pre></td></tr></table></figure>
+<p><strong>其他</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.hasFocus()   <span class="comment">//返回一个布尔值，表示当前文档之中是否有元素被激活或获得焦点。</span></div><div class="line"><span class="built_in">document</span>.adoptNode(externalNode)  <span class="comment">//将某个节点，从其原来所在的文档移除，插入当前文档，并返回插入后的新节点。</span></div><div class="line"><span class="built_in">document</span>.importNode(externalNode, deep)   <span class="comment">//从外部文档拷贝指定节点，插入当前文档。</span></div></pre></td></tr></table></figure></p>
+<h3 id="1-4Element节点"><a href="#1-4Element节点" class="headerlink" title="1.4Element节点"></a>1.4Element节点</h3><h4 id="1-4-1Element节点属性"><a href="#1-4-1Element节点属性" class="headerlink" title="1.4.1Element节点属性"></a>1.4.1Element节点属性</h4><p><strong>特性属性</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Element.attributes  <span class="comment">//返回当前元素节点的所有属性节点</span></div><div class="line">Element.id  <span class="comment">//返回指定元素的id属性，可读写</span></div><div class="line">Element.tagName  <span class="comment">//返回指定元素的大写标签名</span></div><div class="line">Element.innerHTML   <span class="comment">//返回该元素包含的HTML代码，可读写</span></div><div class="line">Element.outerHTML  <span class="comment">//返回指定元素节点的所有HTML代码，包括它自身和包含的的所有子元素，可读写</span></div><div class="line">Element.className  <span class="comment">//返回当前元素的class属性，可读写</span></div><div class="line">Element.classList  <span class="comment">//返回当前元素节点的所有class集合</span></div><div class="line">Element.dataset   <span class="comment">//返回元素节点中所有的data-*属性。</span></div></pre></td></tr></table></figure></p>
+<p><strong>尺寸属性</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Element.clientHeight   <span class="comment">//返回元素节点可见部分的高度</span></div><div class="line">Element.clientWidth   <span class="comment">//返回元素节点可见部分的宽度</span></div><div class="line">Element.clientLeft   <span class="comment">//返回元素节点左边框的宽度</span></div><div class="line">Element.clientTop   <span class="comment">//返回元素节点顶部边框的宽度</span></div><div class="line">Element.scrollHeight  <span class="comment">//返回元素节点的总高度</span></div><div class="line">Element.scrollWidth  <span class="comment">//返回元素节点的总宽度</span></div><div class="line">Element.scrollLeft   <span class="comment">//返回元素节点的水平滚动条向右滚动的像素数值,通过设置这个属性可以改变元素的滚动位置</span></div><div class="line">Element.scrollTop   <span class="comment">//返回元素节点的垂直滚动向下滚动的像素数值</span></div><div class="line">Element.offsetHeight   <span class="comment">//返回元素的垂直高度(包含border,padding)</span></div><div class="line">Element.offsetWidth    <span class="comment">//返回元素的水平宽度(包含border,padding)</span></div><div class="line">Element.offsetLeft    <span class="comment">//返回当前元素左上角相对于Element.offsetParent节点的垂直偏移</span></div><div class="line">Element.offsetTop   <span class="comment">//返回水平位移</span></div><div class="line">Element.style  <span class="comment">//返回元素节点的行内样式</span></div></pre></td></tr></table></figure></p>
+<p><strong>节点相关属性</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Element.children   <span class="comment">//包括当前元素节点的所有子元素</span></div><div class="line">Element.childElementCount   <span class="comment">//返回当前元素节点包含的子HTML元素节点的个数</span></div><div class="line">Element.firstElementChild  <span class="comment">//返回当前节点的第一个Element子节点  </span></div><div class="line">Element.lastElementChild   <span class="comment">//返回当前节点的最后一个Element子节点  </span></div><div class="line">Element.nextElementSibling  <span class="comment">//返回当前元素节点的下一个兄弟HTML元素节点</span></div><div class="line">Element.previousElementSibling  <span class="comment">//返回当前元素节点的前一个兄弟HTML节点</span></div><div class="line">Element.offsetParent   <span class="comment">//返回当前元素节点的最靠近的、并且CSS的position属性不等于static的父元素。</span></div></pre></td></tr></table></figure></p>
+<h4 id="1-4-2Element节点方法"><a href="#1-4-2Element节点方法" class="headerlink" title="1.4.2Element节点方法"></a>1.4.2Element节点方法</h4><p><strong>位置方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">getBoundingClientRect()  </div><div class="line"><span class="comment">// getBoundingClientRect返回一个对象，包含top,left,right,bottom,width,height // width、height 元素自身宽高</span></div><div class="line"><span class="comment">// top 元素上外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// right 元素右外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// bottom 元素下外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// left 元素左外边界距窗口最上面的距离</span></div><div class="line"><span class="comment">// width 元素自身宽(包含border,padding) </span></div><div class="line"><span class="comment">// height 元素自身高(包含border,padding) </span></div><div class="line"></div><div class="line">getClientRects()   <span class="comment">//返回当前元素在页面上形参的所有矩形。</span></div><div class="line"></div><div class="line"><span class="comment">// 元素在页面上的偏移量  </span></div><div class="line"><span class="keyword">var</span> rect = el.getBoundingClientRect()  </div><div class="line"><span class="keyword">return</span> &#123;   </div><div class="line">  <span class="attr">top</span>: rect.top + <span class="built_in">document</span>.body.scrollTop,   </div><div class="line">  <span class="attr">left</span>: rect.left + <span class="built_in">document</span>.body.scrollLeft  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>属性方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Element.getAttribute()：读取指定属性  </div><div class="line">Element.setAttribute()：设置指定属性  </div><div class="line">Element.hasAttribute()：返回一个布尔值，表示当前元素节点是否有指定的属性  </div><div class="line">Element.removeAttribute()：移除指定属性</div></pre></td></tr></table></figure></p>
+<p><strong>查找方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Element.querySelector()  </div><div class="line">Element.querySelectorAll()  </div><div class="line">Element.getElementsByTagName()  </div><div class="line">Element.getElementsByClassName()</div></pre></td></tr></table></figure></p>
+<p><strong>事件方法</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">Element.addEventListener()：添加事件的回调函数  </div><div class="line">Element.removeEventListener()：移除事件监听函数  </div><div class="line">Element.dispatchEvent()：触发事件</div><div class="line"></div><div class="line"><span class="comment">//ie8</span></div><div class="line">Element.attachEvent(oneventName,listener)</div><div class="line">Element.detachEvent(oneventName,listener)</div><div class="line"></div><div class="line"><span class="comment">// event对象  </span></div><div class="line"><span class="keyword">var</span> event = <span class="built_in">window</span>.event||event;    </div><div class="line"></div><div class="line"><span class="comment">// 事件的目标节点  </span></div><div class="line"><span class="keyword">var</span> target = event.target || event.srcElement;</div><div class="line"></div><div class="line"><span class="comment">// 事件代理  </span></div><div class="line">ul.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;   </div><div class="line">  <span class="keyword">if</span> (event.target.tagName.toLowerCase() === <span class="string">'li'</span>) &#123;   </div><div class="line">    <span class="built_in">console</span>.log(event.target.innerHTML)   </div><div class="line">  &#125;  </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>其他</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Element.scrollIntoView()   <span class="comment">//滚动当前元素，进入浏览器的可见区域</span></div><div class="line"></div><div class="line"><span class="comment">//解析HTML字符串，然后将生成的节点插入DOM树的指定位置。</span></div><div class="line">Element.insertAdjacentHTML(where, htmlString); </div><div class="line">Element.insertAdjacentHTML(<span class="string">'beforeBegin'</span>, htmlString); <span class="comment">// 在该元素前插入  </span></div><div class="line">Element.insertAdjacentHTML(<span class="string">'afterBegin'</span>, htmlString); <span class="comment">// 在该元素第一个子元素前插入 </span></div><div class="line">Element.insertAdjacentHTML(<span class="string">'beforeEnd'</span>, htmlString); <span class="comment">// 在该元素最后一个子元素后面插入 </span></div><div class="line">Element.insertAdjacentHTML(<span class="string">'afterEnd'</span>, htmlString); <span class="comment">// 在该元素后插入</span></div><div class="line"></div><div class="line">Element.remove()  <span class="comment">//用于将当前元素节点从DOM中移除</span></div><div class="line">Element.focus()   <span class="comment">//用于将当前页面的焦点，转移到指定元素上</span></div></pre></td></tr></table></figure></p>
+<h2 id="二、CSS操作"><a href="#二、CSS操作" class="headerlink" title="二、CSS操作"></a>二、CSS操作</h2><h3 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ie8以下</span></div><div class="line">Element.className  <span class="comment">//获取元素节点的类名</span></div><div class="line">Element.className += <span class="string">' '</span> + newClassName  <span class="comment">//新增一个类名</span></div><div class="line"></div><div class="line"><span class="comment">//判断是否有某个类名</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">hasClass</span>(<span class="params">element,className</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(className,<span class="string">'gi'</span>).test(element.className);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//移除class</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeClass</span>(<span class="params">element,className</span>)</span>&#123;</div><div class="line">  element.className = element.className.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'(^|\\b)'</span> + className.split(<span class="string">' '</span>).join(<span class="string">'|'</span>) + <span class="string">'(\\b|$)'</span>, <span class="string">'gi'</span>),<span class="string">''</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//ie10 </span></div><div class="line">element.classList.add(className)  <span class="comment">//新增</span></div><div class="line">element.classList.remove(className)  <span class="comment">//删除</span></div><div class="line">element.classList.contains(className)  <span class="comment">//是否包含</span></div><div class="line">element.classList.toggle(className)  <span class="comment">//toggle class</span></div></pre></td></tr></table></figure>
+<h3 id="style操作"><a href="#style操作" class="headerlink" title="style操作"></a>style操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">element.setAttribute(<span class="string">'style'</span>,<span class="string">''</span>)</div><div class="line"></div><div class="line">element.style.backgroundColor = <span class="string">'red'</span></div><div class="line"></div><div class="line">element.style.cssText <span class="comment">//用来读写或删除整个style属性</span></div><div class="line"></div><div class="line">element.style.setProperty(propertyName,value)  <span class="comment">//设置css属性</span></div><div class="line">element.style.getPropertyValue(property)  <span class="comment">//获取css属性</span></div><div class="line">element.style.removeProperty(property)  <span class="comment">//删除css属性</span></div><div class="line">操作非内联样式</div><div class="line"><span class="comment">//ie8</span></div><div class="line">element.currentStyle[attrName]</div><div class="line"><span class="comment">//ie9+</span></div><div class="line"><span class="built_in">window</span>.getComputedStyle(el,<span class="literal">null</span>)[attrName] </div><div class="line"><span class="built_in">window</span>.getComputedStyle(el,<span class="literal">null</span>).getPropertyValue(attrName)</div><div class="line"><span class="comment">//伪类</span></div><div class="line"><span class="built_in">window</span>.getComputedStyle(el,<span class="string">':after'</span>)[attrName]</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+        <div class="nav-previous">
+          <a href="/2017/03/29/hello-world/" rel="prev"><span class="meta-arraw meta-arraw-left"></span> 上一页</a>
+        </div>
+      
+      
+        <div class="nav-next">
+          <a href="/2017/03/24/web/JS正则表达式验证账号、手机号、电话和邮箱/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>
