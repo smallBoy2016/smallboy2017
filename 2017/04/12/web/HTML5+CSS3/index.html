@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Smartboy">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="HTML5+CSS3笔记"/>
+  
+  <!--Open Graph Description-->
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Smartboy"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>HTML5+CSS3笔记 - Smartboy</title>
+
+
+  <link rel="shortcut icon" href="https://hexo.io/icon/favicon-96x96.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://hexo.io/logo.svg" alt="Smartboy" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  Home
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  Archive
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            HTML5+CSS3笔记
+            
+          </h1>
+          <p class="posted-on">
+          2017-04-12
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/web开发/" rel="tag">
+                  web开发
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <h1 id="HTML5-CSS3"><a href="#HTML5-CSS3" class="headerlink" title="HTML5+CSS3"></a>HTML5+CSS3</h1><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="1-HTML5网页结构"><a href="#1-HTML5网页结构" class="headerlink" title="1.HTML5网页结构"></a>1.HTML5网页结构</h3><figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head lang="en"&gt;</div><div class="line">  &lt;meta charset="UTF-8"&gt;</div><div class="line">  &lt;title&gt;&lt;/title&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;header&gt;网页头部&lt;/header&gt;</div><div class="line">    &lt;nav&gt;导航&lt;/nav&gt;</div><div class="line">    &lt;section&gt;一段内容&lt;/section&gt;</div><div class="line">    &lt;article&gt;与上下文不相关的内容&lt;/article&gt;</div><div class="line">    &lt;footer&gt;页脚&lt;/footer&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h3 id="2-HTML5新增标记"><a href="#2-HTML5新增标记" class="headerlink" title="2.HTML5新增标记"></a>2.HTML5新增标记</h3><p><strong>header</strong> 一个页面并没有限制header的出现次数，也就是说我们可以在同一页面内，不同的内容区块上分别加上一个header标记<br><strong>mark</strong> 高亮显示，吸引当前用户注意。默认背景色是黄色，可以设置颜色。</p>
+<p>details 和 summary 组合使用，目前只是chrome支持<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">summary</span>&gt;</span></div><div class="line">    点击我，就展示或隐藏P内容</div><div class="line">  <span class="tag">&lt;/<span class="name">summary</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">P</span>&gt;</span></div><div class="line">    我是内容</div><div class="line">  <span class="tag">&lt;/<span class="name">P</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>progress</strong>显示进度条，可设置长度<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">progress</span> <span class="attr">max</span>=<span class="string">"100"</span> <span class="attr">value</span>=<span class="string">"85"</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>meter</strong>显示进度条，可设置长度，高度。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">"43"</span> <span class="attr">max</span>=<span class="string">"120"</span> <span class="attr">min</span>=<span class="string">"0"</span>&gt;</span>43/120<span class="tag">&lt;/<span class="name">meter</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>加强版的ol</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ol</span> <span class="attr">START</span>=<span class="string">"5"</span> <span class="attr">TYPE</span>=<span class="string">"1"</span> <span class="attr">REVERSED</span>=<span class="string">"reversed"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>...<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>...<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>reversed是倒序<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="3-web-storage"><a href="#3-web-storage" class="headerlink" title="3.web storage"></a>3.web storage</h3><p><strong>临时储存：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//储存</span></div><div class="line">sessionStorage.setItme(<span class="string">'key'</span>,<span class="string">'value'</span>);</div><div class="line"><span class="comment">//读取</span></div><div class="line">sessionStorage.getItem(<span class="string">'key'</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>永久储存</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//储存</span></div><div class="line">localStorage.setItme(<span class="string">'key'</span>,<span class="string">'value'</span>);</div><div class="line"><span class="comment">//读取</span></div><div class="line">localStorage.getItem(<span class="string">'key'</span>);</div><div class="line"><span class="comment">//清空数据</span></div><div class="line">localStorage.clear();</div></pre></td></tr></table></figure></p>
+<h3 id="4-audio-和-video"><a href="#4-audio-和-video" class="headerlink" title="4.audio 和 video"></a>4.audio 和 video</h3><p>使用方法：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"MP3.mp3"</span> <span class="attr">controls</span>=<span class="string">"controls"</span>&gt;</span>对于不支持的浏览器，这里的你内容会显示<span class="tag">&lt;/<span class="name">audio</span>&gt;</span></div><div class="line">source，可以为同一个媒体数据指定多个播放格式月编码方式，以确保浏览器可以从中选择一种自己支持的播放器进行播放。</div><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">"750"</span> <span class="attr">height</span>=<span class="string">"400"</span> <span class="attr">src</span>=<span class="string">"time.mp4"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.m4v"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.webm"</span> <span class="attr">type</span>=<span class="string">"video/webm"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.ogv"</span> <span class="attr">type</span>=<span class="string">"video/ogg"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.mp4"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">autoplay="autoplay" 网页加载完成之后就开始自动播放。</div><div class="line">指定是否对数据进行预加载。</div><div class="line">preload="none | metadata | auto (默认值)"</div><div class="line"></div><div class="line">--&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="5-HTML5拖放"><a href="#5-HTML5拖放" class="headerlink" title="5.HTML5拖放"></a>5.HTML5拖放</h3><p><a href="https://www.html5rocks.com/zh/tutorials/dnd/basics/" target="_blank" rel="external">HTML5拖放</a></p>
+<h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><h4 id=""><a href="#" class="headerlink" title="*"></a>*</h4><h4 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h4><h4 id="class选择器"><a href="#class选择器" class="headerlink" title="class选择器"></a>class选择器</h4><h4 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span> &#123; <span class="attribute">color</span>: red; &#125;</div><div class="line"><span class="selector-tag">ul</span> &#123; <span class="attribute">margin-left</span>: <span class="number">0</span>; &#125;</div></pre></td></tr></table></figure>
+<h4 id="X-Y-后代选择器"><a href="#X-Y-后代选择器" class="headerlink" title="X Y 后代选择器"></a>X Y 后代选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</div><div class="line"><span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="X-gt-Y"><a href="#X-gt-Y" class="headerlink" title="X &gt; Y"></a>X &gt; Y</h4><p>X Y和X &gt; Y的区别是后者只会选中直接后代。</p>
+<h4 id="X-Y-临近元素选择器"><a href="#X-Y-临近元素选择器" class="headerlink" title="X+Y 临近元素选择器"></a>X+Y 临近元素选择器</h4><p>这是邻近元素选择器，只会选中紧接在另一个元素后的元素。这上面的示例中，只有每个ul后面的第一个段落是红色的。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> + <span class="selector-tag">p</span> &#123;</div><div class="line"> <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="X-visited-and-X-link"><a href="#X-visited-and-X-link" class="headerlink" title="X:visited and X:link"></a>X:visited and X:link</h4><p>我们使用:link伪类来定义所有还没点击的链接。<br>另外还有:visited伪类可以让我们给曾经点击过或者访问过的链接添加样式。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123; <span class="attribute">color</span>: red; &#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visted</span> &#123; <span class="attribute">color</span>: purple; &#125;</div></pre></td></tr></table></figure></p>
+<h4 id="X-title"><a href="#X-title" class="headerlink" title="X[title]"></a>X[title]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title]</span> &#123;</div><div class="line"> <span class="attribute">color</span>: green;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="X-checked"><a href="#X-checked" class="headerlink" title="X:checked"></a>X:checked</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=radio]</span><span class="selector-pseudo">:checked</span> &#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">1px</span> solid black;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="X-hover"><a href="#X-hover" class="headerlink" title="X:hover"></a>X:hover</h4><p>给鼠标划过的元素添加样式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line"><span class="attribute">background</span>: <span class="number">#e3e3e3</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="X-nth-child-n"><a href="#X-nth-child-n" class="headerlink" title="X:nth-child(n)"></a>X:nth-child(n)</h4><p>要注意的是nth-child指序列里的第n个元素，从1数起。如果你想匹配列表里的第二个元素，可以使用li:nth-child(2)。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(3)</span> &#123;</div><div class="line"> <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="X-first-child"><a href="#X-first-child" class="headerlink" title="X:first-child"></a>X:first-child</h4><p>用于选中母元素的第一个子元素，常常用于去掉第一个或最后一个元素的边框。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span> &#123;</div><div class="line"> <span class="attribute">border-top</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="X-last-child"><a href="#X-last-child" class="headerlink" title="X:last-child"></a>X:last-child</h4><h4 id="p-class-类选择器"><a href="#p-class-类选择器" class="headerlink" title="p.class  类选择器"></a>p.class  类选择器</h4><hr>
+<p>CSS 分组 和 嵌套 选择器<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">p</span></div><div class="line">&#123;</div><div class="line"><span class="attribute">color</span>:green;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2-伪元素选择器"><a href="#2-伪元素选择器" class="headerlink" title="2.伪元素选择器"></a>2.伪元素选择器</h3><p>使用方法：<br>选择器：伪元素{属性：值}<br>选择器：伪元素{属性：值}</p>
+<h4 id="1-first-line"><a href="#1-first-line" class="headerlink" title="1.first-line"></a>1.first-line</h4><p>用于向某个元素中的第一行文字使用样式。</p>
+<h4 id="2-first-letter"><a href="#2-first-letter" class="headerlink" title="2.first-letter"></a>2.first-letter</h4><p>用于向某个元素中的文字的首字母（欧美文字）或是第一个字（中文）使用样式</p>
+<h4 id="3-before"><a href="#3-before" class="headerlink" title="3.before"></a>3.before</h4><p>用于某个元素之前插入一些内容</p>
+<h4 id="4-after"><a href="#4-after" class="headerlink" title="4.after"></a>4.after</h4><p>用于在某个元素之后插入内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-line</span>&#123;<span class="attribute">colro</span>:red;&#125;</div><div class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-letter</span>&#123;<span class="attribute">font-size</span>:<span class="number">30px</span>;&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">  <span class="attribute">content</span>:<span class="string">"...追加的文字"</span>;</div><div class="line">  <span class="attribute">color</span>:red;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">  <span class="attribute">content</span>:<span class="string">"...追加的文字"</span>;</div><div class="line">  <span class="attribute">color</span>:green;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">会被改的第一行<span class="tag">&lt;<span class="name">br</span>/&gt;</span></div><div class="line">不会被改变的一行文字</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span>&gt;</span>一些文字<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="3-结构性伪类选择器"><a href="#3-结构性伪类选择器" class="headerlink" title="3.结构性伪类选择器"></a>3.结构性伪类选择器</h3><h4 id="root"><a href="#root" class="headerlink" title="root"></a>root</h4><p>将样式绑定到页面的根元素中</p>
+<h4 id="not"><a href="#not" class="headerlink" title="not"></a>not</h4><p>相对某个结构元素使用样式，但是想排除这个结构元素下面的子结构元素。</p>
+<h4 id="empty"><a href="#empty" class="headerlink" title="empty"></a>empty</h4><p>当指定元素中内容为空白的时候使用的样式，多用于表格</p>
+<h4 id="target"><a href="#target" class="headerlink" title="target"></a>target</h4><p>对页面中某个target元素指定样式，该样式只在用户点击了页面中的超链接，并跳转到target元素后起作用。</p>
+<p><strong>see also</strong><br><a href="http://www.cnblogs.com/xuan-0107/p/4450577.html" target="_blank" rel="external">结构性伪类</a><br><a href="http://www.cnblogs.com/coco1s/p/6067305.html" target="_blank" rel="external">2</a></p>
+<hr>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p><a href="http://caibaojian.com/css3-card.html" target="_blank" rel="external">CSS3卡牌旋转滑动效果</a></p>
+<p><a href="http://www.daqianduan.com/6281.html" target="_blank" rel="external">手机移动端WEB资源整合</a></p>
+<h3 id="前端博客"><a href="#前端博客" class="headerlink" title="前端博客"></a>前端博客</h3><p><a href="https://www.xiabingbao.com/archive.html" target="_blank" rel="external">Wenzi</a><br><a href="http://qitiancom.com/" target="_blank" rel="external">前端开发-朱宝详</a></p>
+<p><a href="http://www.haorooms.com/" target="_blank" rel="external">http://www.haorooms.com/</a></p>
+<p><a href="http://caibaojian.com/links" target="_blank" rel="external">前端网址导航</a></p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">留言</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/2017/04/06/web/HTML + CSS/" rel="prev">下一页 <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">关于本站</h1>
+        <div class="custom-widget-content">
+          
+          <ul><li><a href="blog.smartboy.top">This is blog</a></li><li><a href="blog.smartboy.top">Smartboy</a></li></ul>
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">与我联系</h1>
+        <div class="widget-text">
+          
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">站内搜索</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Smartboy &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>This is blog</span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+</body>
+
+</html>
