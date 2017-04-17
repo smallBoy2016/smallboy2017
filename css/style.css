@@ -841,7 +841,7 @@ Footer
 code,
 pre {
   font-size: 0.8em;
-  background-color: #f8f8f8;
+  background-color: #23241f;
   font-family: 'Roboto Mono', Monaco, courier, monospace; }
 
 code {
@@ -942,7 +942,7 @@ pre .line {
   content: 'C++'; }
 
 pre {
-  color: #525252; }
+  color: #f8f8f2; }
   pre .function .keyword,
   pre .constant {
     color: #0092db; }
