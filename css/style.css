@@ -1015,6 +1015,9 @@ pre {
   pre .xml .cdata {
     opacity: 0.5; }
 
+.tag .name {
+  color: #ffffff; }
+
 .archive {
   padding-bottom: 60px; }
   .archive h2.year {
