@@ -4,7 +4,7 @@
 		var timer = null;
 		var totalCount = $("#bannerbox").find("li").length;
 	
-		//ï¿½ï¿½Ò»Ò³ï¿½ï¿½ï¿½ï¿½
+		//ÏÂÒ»Ò³¹¦ÄÜ
 		$(".next").on("click",function(){
 			if(timer)clearInterval(timer);
 			index++;
@@ -14,7 +14,7 @@
 			auto_play_banner();
 		});
 
-		//ï¿½ï¿½Ò»Ò³ï¿½ï¿½ï¿½ï¿½
+		//ÉÏÒ»Ò³¹¦ÄÜ
 		$(".pre").on("click",function(){
 			if(timer)clearInterval(timer);
 			index--;
@@ -24,7 +24,7 @@
 			auto_play_banner();
 		});
 
-		//ï¿½ï¿½Õ¹Í¼ï¿½Ð»ï¿½
+		//ÂÖÕ¹Í¼ÇÐ»»
 		$("#toolbar").find("li").mouseover(function(){
 			if(timer)clearInterval(timer);
 			index = $(this).index();
@@ -33,7 +33,7 @@
 			auto_play_banner();
 		});
 		
-		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ö²ï¿½
+		//³õÊ¼»¯×Ô¶¯ÂÖ²¥
 		auto_play_banner();
 		function auto_play_banner(){
 			timer = setInterval(function(){
@@ -46,13 +46,13 @@
 			},playTime);
 		}
 		
-		//ï¿½Ü¿ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+		//×Ü¿ØÖÆ·½·¨
 		function banner_main(index){
 			var $liObj = $("#bannerbox").find("li").eq(index);
 			var $toolbar = $("#toolbar").find("li").eq(index);
 			$liObj.fadeIn("slow").siblings().hide();			
-			$toolbar.addClass("on").siblings().removeClass("on");//ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½			
+			$toolbar.addClass("on").siblings().removeClass("on");//°´Å¥Áª¶¯
+			//±³¾°Áª¶¯			
 			var $background = $toolbar.data("color");
 			$(".b_bg").css("background",$background);
 		}		
