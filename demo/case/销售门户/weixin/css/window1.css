@@ -1,0 +1,120 @@
+.menu{
+  height: 4rem;
+}
+.search{
+  width: 80%;
+  max-width: 414px;
+  height: 6%;
+  background: #5d5d5d;
+  border-radius: 2rem;
+  position: absolute;
+  top:0.8rem;
+  left: 9.6%;
+}
+.search_1{
+  width: 2.6rem;height: 2.4rem;
+  background: #5d5d5d;
+  position: absolute;top:0;left: 0.2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+.search input{
+  width: 10rem;
+  height: 1.4rem;
+  margin: 2.2% 0 0 18%;
+  background: #5d5d5d;
+  outline: none;
+  color:#fff;
+  font-size: 0.8rem;
+}
+.search_3{
+  width: 2.6rem;height: 2.4rem;
+  background: #323232;
+  position: absolute;right: 0;top: 0;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+.menu ul{
+  margin-left: 0.4rem;
+  margin-top: 5rem;
+}
+.menu ul li{
+  width: 19%;
+  float: left;
+  text-align: center;
+  line-height: 3rem;
+  background: #ccc;
+  margin-left: 2px;
+}
+.menu ul li a{
+  font-size: 0.8rem;
+}
+
+.win_1{
+  width: 92%;
+  margin:0 auto;
+  height: 8rem;
+}
+.win_1_left{
+  width: 4rem;height: 6rem;
+  background: #fff;
+  font-size: .8rem;
+  text-align: center;
+  border:1px solid #ccc;
+  float: left;
+}
+.win_1_left img{
+  margin-top: 1rem;
+}
+.win_1_right{
+  width: 17rem;height: 7rem;
+  padding-left: .4rem;
+  background: #e6e6e6;float: right;;
+  font-size: .6rem;
+}
+.win_1_right h5{
+  margin-top: .4rem;
+}
+h5{
+  color:#f72;
+}
+.win_1_right p{
+  margin:.5rem 0;
+}
+.win_2{
+  width: 92%;
+  height: auto;
+  margin:0 auto;
+  background: #e6e6e6;
+}
+.win_2 div{
+  padding: .3rem 0;
+}
+.win_2 p{
+  font-size: .6rem;
+}
+
+.win_bank{
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin-right: 1.5rem;
+}
+/*4-5*/
+@media screen and (min-width: 320px) and (max-width: 374px){
+  .search{
+    height: 8%;
+  }
+  .win_1_right{
+    width: 13.5rem;
+  }
+}
+/*6p*/
+@media screen and (min-width: 414px) and (max-width: 960px){
+
+  .win_1_right{
+    width: 19rem;
+  }
+}

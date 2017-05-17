@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=320,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="UTF-8">
+  <title>网上大厅</title>
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/policy.css">
+</head>
+<body>
+ 
+<div class="wrap">
+  <div class="menu">
+    <ul>
+      <li style="background: #f72;"><a href="">中心介绍</a></li>
+      <li><a href="">中心新闻</a></li>
+      <li><a href="">政策法规</a></li>
+      <li><a href="">办事指南</a></li>
+    </ul>  
+  </div>
+  <div class="box">
+    <ul>
+       <li><a href="">服务中心简介</a></li>
+       <li><a href="">中心领导</a></li>
+       <li><a href="">中心大事记</a></li>
+       <li><a href="">中心统计数字</a></li>
+     </ul> 
+  </div>
+
+  <div class="win_bank">
+    <img src="img/service/top0.6.png" width="25" height="25">
+  </div>
+</div> 
+
+<script>
+  var oBank = document.getElementsByClassName("win_bank");
+
+  bankTop(oBank[0]);
+    
+  function bankTop(obj){
+    obj.addEventListener("touchstart",function(){
+    var H = document.body.scrollTop;
+    var timer = setInterval(function(){
+      H -=8;
+      document.body.scrollTop = H;
+      if (H <= 0) {
+        clearInterval(timer);
+      } 
+    },10);
+  });
+  }
+</script>
+
+</body>
+</html>

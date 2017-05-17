@@ -1,0 +1,22 @@
+home:首页
+	login:登录
+	zhuce:注册
+	zuixinhezuo
+
+hezuo ：合作
+
+qiye
+	qiye2:企业动态
+	qiye3
+	qiye4
+chanp
+
+recruit ：招聘
+
+kehu : 客户
+
+Study ： 学习
+
+xiaoxi
+
+forget ：忘记密码

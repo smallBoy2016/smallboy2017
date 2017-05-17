@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=320,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="UTF-8">
+  <title>服务窗口</title>
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/window1.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="menu">
+    <div class="search">
+      <div class="search_1"><img src="img/home/icon1.png" width="18" height="23"></div>
+      <input type="text" placeholder="请输入你想搜索的内容">
+      <div class="search_3"><img src="img/home/icon2.png" width="18" height="18"></div>
+    </div>
+    <ul>
+      <li style="background: #f72;"><a href="">服务窗口</a></li>
+      <li><a href="">个人办事</a></li>
+      <li><a href="">企业办事</a></li>
+      <li><a href="">绿色通道</a></li>
+      <li><a href="">办事向导</a></li>
+    </ul>
+  </div> 
+  
+  <div class="win_1">
+    <div class="win_1_left">
+      <img src="img/service/JH-R.png" width="40" height="40">
+      <p>发改</p>  
+    </div>
+    <div class="win_1_right">
+      <h5>窗口电话</h5>
+      <p>0512-67591801 (发改局)</p>
+      <p>0512-67591804 (发改局)</p>
+      <p>说明：咨询其他窗口事项请查看各窗口咨询电话</p>
+    </div>   
+  </div>
+
+  <div class="win_2">
+    <h5>服务事项</h5>
+    <div>
+      <p>1.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>2.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>3.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>4.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>5.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>6.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>7.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>8.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+    <div>
+      <p>9.&nbsp;&nbsp;&nbsp;权利事项：区权限内政府投资项目的初步设计审批</p>
+      <p>&nbsp;&nbsp;&nbsp;权利编码：JS050700FG-QT-0001</p>
+      <p>&nbsp;&nbsp;&nbsp;1.1&nbsp;&nbsp;&nbsp;区权限内政府投资项目的初步设计审批 审批类</p>
+    </div>
+  </div>
+  
+  <div class="win_bank">
+    <img src="img/service/top0.6.png" width="25" height="25">
+  </div>
+
+  <div style="height:30px;"></div>
+</div>
+
+<script>
+
+var oBank = document.getElementsByClassName('win_bank');
+
+bankTop(oBank[0]);
+  function bankTop(obj){
+    obj.addEventListener('touchstart',function(){
+    var H = document.body.scrollTop;
+    var timer = setInterval(function(){
+      H -=8;
+      document.body.scrollTop = H;
+      if (H <= 0) {
+        clearInterval(timer);
+      } 
+    },10);
+  });
+  }
+</script>
+</body>
+</html>

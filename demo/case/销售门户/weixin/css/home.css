@@ -1,0 +1,286 @@
+.wrap h3{
+  background: #111;
+  color:#fff;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.banner{
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+}
+.banner_img{
+  height: 100%;
+  width: 1500px;
+}
+.banner_img li:nth-child(1){
+  height: 100%;width: 375px;float: left;
+  background: url(../img/home/banner01.png);
+  background-size: 100%;
+}
+.banner_img li:nth-child(2){
+  height: 100%;width: 375px;float: left;
+  background: url(../img/home/banner01.png);
+  background-size: 100%;
+}
+.banner_img li:nth-child(3){
+  height: 100%;width: 375px;float: left;
+  background: url(../img/home/banner01.png);
+  background-size: 100%;
+}
+.banner_img li:nth-child(4){
+  height: 100%;width: 375px;float: left;
+  background: url(../img/home/banner01.png);
+  background-size: 100%;
+}
+.search{
+  width: 80%;
+  height: 19%;
+  background: #5d5d5d;
+  border-radius: 2rem;
+  position: absolute;
+  top:0.8rem;
+  left: 9.6%;
+}
+.search_1{
+  width: 2.6rem;height: 2.4rem;
+  background: #5d5d5d;
+  position: absolute;top:0;left: 0.2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+.search input{
+  width: 10rem;
+  height: 1.4rem;
+  margin: 2.2% 0 0 18%;
+  background: #5d5d5d;
+  outline: none;
+  color:#fff;
+  font-size: 0.8rem;
+}
+.search_3{
+  width: 2.6rem;height: 2.4rem;
+  background: #323232;
+  position: absolute;right: 0;top: 0;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+.banner_btn{
+  height: .5rem;width: 4rem;
+  position: absolute;bottom: .5rem;
+  margin-left:40%;
+}
+.banner_btn ul li{
+  width: .4rem;height: .4rem;
+  background: #111;
+  border-radius: 50%;
+  float: left;
+  margin-left: 16%;
+}
+.menu{
+  height: 10rem;
+  background: #f5f5f5;
+}
+.menu ul li{
+  width: 19%;
+  height: 33%;
+  margin-left: 3.8%;
+  margin-top: 4%;
+  display: inline-block;
+}
+.menu ul li div{
+  width: 2.2rem;height: 2.3rem;
+  background: #f72;
+  border-radius: 4px;
+  margin:0 auto;
+}
+.menu ul li img{
+  margin:0.4rem 0.4rem;
+}
+.menu ul li a{
+  color:#333;
+  display: block;
+  font-size: .6rem;
+  text-align: center;
+  line-height: 1.4rem;
+} 
+.hot{
+  height: 7.5rem;
+  background: #f5f5f5;
+}
+.hot_left{
+  width: 38%;height: 88%;
+  background: url(../img/home/earth.png);
+  background-size:100%;
+  float:left;
+}
+.hot_right{
+  width: 56%;height: 88%;
+  float:left;
+  margin-left: 3%;
+}
+.news_title{
+  height: 44%;
+  background: #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+.news_title p{
+  width: 1.8rem;height: 1.8rem;
+  background: #f72;
+  border-radius: 50%;    
+  text-align: center;
+  position: absolute;top:14%;left: 6%;
+}
+.news_title h4{
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left:24%;
+  line-height: 2.6rem;
+}
+.news_title span{
+  font-size: .6rem;
+  color: #666;
+  position: absolute;right: 6%;top:30%;
+}
+.news_content{
+  height: 50%;
+  margin-top: 2%;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  background: #e6e6e6;
+  color:#111;
+}
+.news_content p{
+  padding: .3rem .8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.guide{
+  height: 7.2rem;
+}
+.guide_left{
+  width: 48%;height: 100%;
+  background: url(../img/home/low.png);
+  background-size: 100%;
+  float: left;
+}
+.guide_right{
+  width: 48%;height: 100%;
+  margin-left: 0.5rem;
+  background: url(../img/home/low.png);
+  background-size: 100%;
+  float:left;  
+}
+.guide_right img{
+  float:right;
+}
+/*iphone 4 - 5*/
+@media screen and (min-width: 320px) and (max-width: 374px){
+  .banner{
+    height: 10.5rem;
+    max-width: 320px;
+  }
+  .banner_img{
+    width: 1280px;
+  }
+  .banner_img li:nth-child(1){
+    width: 320px;
+  }
+  .banner_img li:nth-child(2){
+    width: 320px;
+  }
+  .banner_img li:nth-child(3){
+    width: 320px;
+  }
+  .banner_img li:nth-child(4){
+    width: 320px;
+  }
+  .search_1{
+    width: 2.2rem;height: 2rem;line-height: 2.6rem;
+  }
+  .search_3{
+    width: 2.2rem;height: 2rem;
+  }
+  .hot{
+    height: 
+  }
+  .hot_left{
+    height: 77%;
+  }
+  .news_content{
+    height: 44%;
+  }
+  .news_content p{
+    padding: .2rem .8rem;
+  }  
+}
+
+/*iphone 6*/
+@media screen and (min-width: 375px) and (max-width: 413px){
+  .banner{
+    height: 12.5rem;
+  }
+  .menu{
+    height: 12rem;
+  }
+  .menu ul li{
+    margin-top: 6%;
+  }
+}
+/*iphone 6 plus*/
+@media screen and (min-width: 414px) and (max-width: 639px){
+  .banner{
+    height: 13.8rem;
+  }
+  .banner_img{
+    width: 1656px;
+  }
+  .banner_img li:nth-child(1){
+    width: 414px;
+  }
+  .banner_img li:nth-child(2){
+    width: 414px;
+  }
+  .banner_img li:nth-child(3){
+    width: 414px;
+  }
+  .banner_img li:nth-child(4){
+    width: 414px;
+  }
+  .menu{
+    height: 14rem;
+  }
+  .menu ul li{
+    margin-top: 8%;
+  }
+  .search input{
+    width: 12rem;
+    height: 1.8rem;
+  }
+  .search_3{
+    height: 2.6rem;width: 3.6rem;
+  }
+}
+/*ipad mini*/
+/* @media screen and (min-width: 640px) and (max-width: 768px){
+  .banner{
+    height: 25.5rem;
+  }
+  .search_1{
+    width: 5.2rem;height: 4.8rem;line-height: 5.8rem;
+  }
+  .search_3{
+    width: 5.2rem;height: 4.8rem;line-height: 5.8rem;
+  }
+  .search input{
+    width: 22rem;
+    height: 3rem;
+  }
+} */

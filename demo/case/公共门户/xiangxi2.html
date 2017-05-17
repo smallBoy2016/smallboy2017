@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<title>Login | Unify - Responsive Website Template</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- CSS Header and Footer -->
+	<link rel="stylesheet" href="assets/css/headers/header-default.css">
+	<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="assets/plugins/animate.css">
+	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+	<!-- CSS Page Style -->
+	<link rel="stylesheet" href="assets/css/pages/page_log_reg_v1.css">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+
+	<!-- CSS Customization -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<style type="text/css">
+		ul,li{list-style: none;}
+		.eytActive{
+			background: green;
+		}
+		.eytUl{
+			height: 50px;
+		}
+		.eytUl li{
+			width: 330px;height: 30px;background: #ccc;float:left;margin:0 10px;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--=== Header ===-->
+		<div class="header">
+			<div class="container">
+				<!-- Logo -->
+				<a class="logo" href="home.html">
+					<img src="assets/img/logo1-default.png" alt="Logo">
+				</a>
+				<!-- End Logo -->
+
+				<!-- Topbar -->
+				<div class="topbar">
+					<ul class="loginbar pull-right">
+						<li><a href="login.html" id="eytBtn2">登录</a></li>
+						<li class="topbar-devider"></li>
+						<li><a href="zhuce.html">注册</a></li>
+						<li class="topbar-devider"></li>
+						<li><a href="forget.html">找回密码</a></li>
+						<li class="topbar-devider"></li>
+						<li><a href="javascript:;">其他</a></li>
+					</ul>
+				</div>
+				<!-- End Topbar -->
+
+				<!-- Toggle get grouped for better mobile display -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+				<!-- End Toggle -->
+			</div><!--/end container-->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+				<div class="container">
+					<ul class="nav navbar-nav">
+						<!-- Home -->
+						<li class="dropdown active">
+							<a href="home.html" class="dropdown-toggle">
+								首页
+							</a>
+						</li>
+						<!-- End Home -->
+
+						<!-- Pages -->
+						<li class="dropdown">
+							<a href="cooperation.html" class="dropdown-toggle" target="_blank">
+								合作
+							</a>
+						</li>
+						<!-- End Pages -->
+
+						<!-- Blog -->
+						<li class="dropdown">
+							<a href="recruit.html" class="dropdown-toggle" target="_blank">
+								招聘
+							</a>
+						</li>
+						<!-- End Blog -->
+
+						<!-- Portfolio -->
+						<li class="dropdown">
+							<a href="daixiao.html">
+								代销
+							</a>
+						</li>
+						<!-- End Portfolio -->
+
+						<!-- Features -->
+						<li class="dropdown">
+							<a href="sales.html" class="dropdown-toggle">
+								销售
+							</a>
+						</li>
+						<!-- End Features -->
+
+						<!-- Shortcodes -->
+						<li class="dropdown mega-menu-fullwidth">
+							<a href="study.html" class="dropdown-toggle">
+								学习
+							</a>
+						</li>
+						<!-- End Shortcodes -->
+
+						<!-- Search Block -->
+						<li>
+							<i class="search fa fa-search search-btn"></i>
+							<div class="search-open">
+								<div class="input-group animated fadeInDown">
+									<input type="text" class="form-control" placeholder="Search">
+									<span class="input-group-btn">
+										<button class="btn-u" type="button">查找</button>
+									</span>
+								</div>
+							</div>
+						</li>
+						<!-- End Search Block -->
+					</ul>
+				</div><!--/end container-->
+			</div><!--/navbar-collapse-->
+		</div>
+		<!--=== End Header ===-->
+
+		<div class="bg-grey">
+
+			<div class="container content-md">
+				<div class="headline"><h2>信息发布</h2></div>
+				
+				<ul class="eytUl">
+					<li >1:选择分类</li>
+					<li style="background:green;color:#fff;">2:填写详细信息</li>
+					<li>3：完成发布</li>
+				</ul>
+				
+				<div class="col-md-8 col-md-offset-2">
+					<form class="form-inline">
+						<span>招聘职位：</span>
+					  <select class="form-control">
+					    <option>行销</option>
+					    <option>电子器械</option>
+					    <option>医药类</option>
+					  </select>
+					  <select class="form-control">
+					    <option>销售员</option>
+					    <option>行政助理</option>
+					    <option>线下推广</option>
+					  </select>
+					</form>
+		<br>
+					<form class="form-inline">
+						<span>地区：</span>
+					  <select class="form-control">
+					    <option>北京市</option>
+					    <option>天津市</option>
+					    <option>上海市</option>
+					    <option>重庆市</option>
+					    <option>深圳市</option>
+					  </select>
+					  <select class="form-control">
+					    <option>园区</option>
+					    <option>吴江</option>
+					    <option>昆山</option>
+					    <option>相城</option>
+					    <option>新区</option>
+					  </select>
+					  <select class="form-control">
+					    <option>园区</option>
+					    <option>吴江</option>
+					    <option>昆山</option>
+					    <option>相城</option>
+					    <option>新区</option>
+					  </select>
+
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>标题：</span>
+						<input type="text" class="form-control" placeholder="Text input">
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>工作性质：</span>
+					  <select class="form-control">
+					    <option>全职</option>
+					    <option>兼职</option>
+					  </select>
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>薪资：</span>
+					  <select class="form-control">
+					    <option>7000~8900</option>
+					    <option>10000+</option>
+					  </select>
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>工作年限：</span>
+					  <select class="form-control">
+					    <option>不限</option>
+					    <option>一年以上</option>
+					    <option>三年以上</option>
+					  </select>
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>信息标签：</span>
+						<input type="text" class="form-control" placeholder="Text input">
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>职位诱惑：</span>
+						<textarea class="form-control" rows="3" style="width:680px;"></textarea>
+					</form>
+					<br>
+					<form class="form-inline">
+						<span>职位介绍：</span>
+						<textarea class="form-control" rows="8" style="width:680px;"></textarea>
+						<section class="col col-6">
+						<p>上传照片：</p>
+							<img src="1.jpg">
+							<input type="file">
+							截至日期：2016-08-08
+						</section>
+					</form>
+					<br>
+					<p>
+					  <button type="button" class="btn btn-primary">完成</button>
+				
+					</p>
+				</div>
+				
+
+			</div>
+		</div>
+
+		<!--=== Footer Version 1 ===-->
+		<div class="footer-v1">
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<!-- About -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
+							<h4 style="color:red;">关于我们</h4>
+							<p>我是一家很吊的企业，没有之一</p>
+						</div><!--/col-md-3-->
+						<!-- End About -->
+
+						<!-- Latest -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="posts">
+								<div class="headline"><h2>商务合作</h2></div>
+								<ul class="list-unstyled latest-list">
+									<li>
+										<a href="#">阿里巴巴</a>
+										<small>May 8, 2014</small>
+									</li>
+									<li>
+										<a href="#">京东</a>
+										<small>June 23, 2014</small>
+									</li>
+									<li>
+										<a href="#">当当代驾</a>
+										<small>September 15, 2014</small>
+									</li>
+								</ul>
+							</div>
+						</div><!--/col-md-3-->
+						<!-- End Latest -->
+
+						<!-- Link List -->
+						<div class="col-md-3 md-margin-bottom-40">
+							<div class="headline"><h2>帮助中心</h2></div>
+							<ul class="list-unstyled link-list">
+								<li><a href="#">你需要什么帮助？</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">你需要什么帮助？</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">你需要什么帮助？</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">你需要什么帮助？</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">你需要什么帮助？</a><i class="fa fa-angle-right"></i></li>
+							</ul>
+						</div><!--/col-md-3-->
+						<!-- End Link List -->
+
+						<!-- Address -->
+						<div class="col-md-3 map-img md-margin-bottom-40">
+							<div class="headline"><h2>联系我们</h2></div>
+							<address class="md-margin-bottom-40">
+								我们是一家很吊的企业<br>
+								位于苏州园区<br>
+								Phone: 800 123 3456 <br>
+								Fax: 800 123 3456 <br>
+								Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+							</address>
+						</div><!--/col-md-3-->
+						<!-- End Address -->
+					</div>
+				</div>
+			</div><!--/footer-->
+
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								2016 © 版权归属
+								 | <a href="http://www.sz-net.net" target="_blank">苏州恩易特网络科技公司</a>
+							</p>
+						</div>
+
+						<!-- Social Links -->
+						<div class="col-md-6">
+						</div>
+						<!-- End Social Links -->
+					</div>
+				</div>
+			</div><!--/copyright-->
+		</div>
+		<!--=== End Footer Version 1 ===-->
+	</div><!--/wrapper-->
+
+	<!-- JS Global Compulsory -->
+	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+	<!-- JS Customization -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+			StyleSwitcher.initStyleSwitcher();
+
+			//信息发布完成挑转
+			$('.btn').on("click",function(){
+				window.location.href = 'xingxifabuwanc.html';
+			});
+		});
+	</script>
+<!--[if lt IE 9]>
+	<script src="assets/plugins/respond.js"></script>
+	<script src="assets/plugins/html5shiv.js"></script>
+	<script src="assets/plugins/placeholder-IE-fixes.js"></script>
+	<![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+.menu{
+  height: 4rem;
+}
+.search{
+  width: 80%;
+  max-width: 414px;
+  height: 6%;
+  background: #5d5d5d;
+  border-radius: 2rem;
+  position: absolute;
+  top:0.8rem;
+  left: 9.6%;
+}
+.search_1{
+  width: 2.6rem;height: 2.4rem;
+  background: #5d5d5d;
+  position: absolute;top:0;left: 0.2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+.search input{
+  width: 10rem;
+  height: 1.4rem;
+  margin: 2.2% 0 0 18%;
+  background: #5d5d5d;
+  outline: none;
+  color:#fff;
+  font-size: 0.8rem;
+}
+.search_3{
+  width: 2.6rem;height: 2.4rem;
+  background: #323232;
+  position: absolute;right: 0;top: 0;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 2.6rem;
+}
+.menu ul{
+  margin-left: 0.4rem;
+  margin-top: 5rem;
+}
+.menu ul li{
+  width: 19%;
+  float: left;
+  text-align: center;
+  line-height: 3rem;
+  background: #ccc;
+  margin-left: 2px;
+}
+.menu ul li a{
+  font-size: 0.8rem;
+}
+.bg{
+  width:92%;
+  margin:0 auto;
+  height: 12.2rem;
+  background: url(../img/service/personal_banner.png);
+  background-size: 100%;
+}
+.path{
+  height: 30%;
+  width: 92%;
+  margin:.8rem auto;
+  background:#fff;
+}
+.path ul li{
+  height: 3.5rem;
+  margin:0.5% 0;
+  background: #ccc;
+  position: relative;
+}
+.path ul li p{
+  width: 16rem;
+  height: 3.5rem;
+  font-size:.8rem;
+  position: absolute;right: 0;top:0;
+  line-height: 3.5rem;
+}
+.path ul li p span:nth-child(2){
+  width: 2rem;height: 2rem;
+  display: inline-block;
+  background: #fff;
+  margin-left: 10rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.3rem;
+}
+
+/* 4-5 */
+@media screen and (min-width: 320px) and (max-width: 374px){
+  .bg{
+    height: 10.4rem;
+  }
+  .search{
+    height: 8%;
+  }
+  .path ul li p{
+    width: 13rem;
+    font-size: .8rem;
+  }
+  .path ul li p span:nth-child(2){
+   margin-left: 7.5rem;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 639px){
+  .bg{
+    height: 13.4rem;
+  }
+  .path ul li p{
+    width: 18rem;
+    font-size: 1rem;
+  }
+  .path ul li p span:nth-child(2){
+    margin-left: 10.5rem;
+  }
+}
